@@ -1,0 +1,1 @@
+"use strict";(function(){var n=jQuery(".fact-module > .component-content > .field-number");n.each(function(n){var t=jQuery(this),i;t.attr("id","fact-number-"+n);i=t.attr("id");i=i.replace("#","");var r=t.text(),u=new CountUp(i,0,r,0,4.5,{useEasing:!0,separator:""});jQuery(t).on("inview",function(n,t){t&&setTimeout(function(){u.start()},500)})})})()
