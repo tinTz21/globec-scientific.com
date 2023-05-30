@@ -15,6 +15,8 @@
                 <i class="bi-facebook text-light" style="font-size: 1rem;"></i>
                 &nbsp;
                 <i class="bi-instagram text-light" style="font-size: 1rem;"></i>
+                &nbsp;
+                <i class="bi-cart2 text-light" style="font-size: 1rem;"></i>
             </div>
 
         </div>
