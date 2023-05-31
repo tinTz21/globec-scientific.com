@@ -120,6 +120,8 @@
         </div>
     </div>
 
+
+
     <div class="container-fluid bg-light" style="padding: 2em; margin-top: 1em;">
         <div class="container-fluid">
             <h1>
@@ -193,7 +195,7 @@
             </div>
         
             <div class="col-md-6">
-                <div class="card mb-3 border-0" style="max-width: 540px;">
+                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
                   <div class="row g-0">
                     <div class="col-md-6">
                       <img src="images/bed.jpeg" style="margin-top: 26%" class="img-fluid rounded-start" alt="...">
@@ -217,7 +219,7 @@
             </div>
 
             <div class="col-md-6">
-                <div class="card mb-3 border-0" style="max-width: 540px;">
+                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
                   <div class="row g-0">
                     <div class="col-md-6">
                       <img src="images/meter.jpg" style="margin-top: 5%" class="img-fluid rounded-start" alt="...">
@@ -240,7 +242,7 @@
             </div>
 
             <div class="col-md-6">
-                <div class="card mb-3 border-0" style="max-width: 540px;">
+                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
                   <div class="row g-0">
                     <div class="col-md-6">
                       <img src="images/tube.jpeg" style="padding: 12%" class="img-fluid rounded-start" alt="...">
@@ -264,7 +266,7 @@
             </div>
 
             <div class="col-md-6">
-                <div class="card mb-3 border-0" style="max-width: 540px;">
+                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
                   <div class="row g-0">
                     <div class="col-md-6">
                       <img src="images/ultrasound.jpeg" style="margin-top: 5%" class="img-fluid rounded-start" alt="...">
@@ -290,15 +292,155 @@
         </div>
     </div>
 
-    <div>
-        success story
+    <div class="container bg-transparent" style="padding:2em; margin-top: 1em;">
+        <div class="row">
+            <div class="col-md-12 " >
+                <h1 class="d-flex justify-content-center text-light">
+                    Testimonials
+                </h1>
+                <hr class="text-light">
+                <h3 class="d-flex justify-content-center text-light">
+                    What Client Says About Us
+                </h3>
+
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <!-- <h5 class="card-title">Card title</h5> -->
+                    <p class="card-text d-flex justify-content-center" style="padding-top: 3em; padding-left: 3em; padding-right: 3em;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    </p>
+                    <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                  </div>
+                  <img src="images/cancer.jpg" class="rounded-pill d-flex justify-content-center" style="width: 10em !important; margin-left: 9em;" alt="...">
+
+                  <div class="card-body">
+                    <h4 class="d-flex justify-content-center">
+                        Debora Augustino
+                    </h4>
+                    <p class="d-flex justify-content-center">
+                        Marketing Manager
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <!-- <h5 class="card-title">Card title</h5> -->
+                    <p class="card-text d-flex justify-content-center" style="padding-top: 3em; padding-left: 3em; padding-right: 3em;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    </p>
+                    <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                  </div>
+                  <img src="images/cancer.jpg" class="rounded-pill d-flex justify-content-center" style="width: 10em !important; margin-left: 9em;" alt="...">
+
+                  <div class="card-body">
+                    <h4 class="d-flex justify-content-center">
+                        Debora Augustino
+                    </h4>
+                    <p class="d-flex justify-content-center">
+                        Marketing Manager
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <!-- <h5 class="card-title">Card title</h5> -->
+                    <p class="card-text d-flex justify-content-center" style="padding-top: 3em; padding-left: 3em; padding-right: 3em;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    </p>
+                    <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+                  </div>
+                  <img src="images/cancer.jpg" class="rounded-pill d-flex justify-content-center" style="width: 10em !important; margin-left: 9em;" alt="...">
+
+                  <div class="card-body">
+                    <h4 class="d-flex justify-content-center">
+                        Debora Augustino
+                    </h4>
+                    <p class="d-flex justify-content-center">
+                        Marketing Manager
+                    </p>
+                  </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <div>
-        Events & Presentations
-    </div>
+    <div class="container-fluid bg-light" style="padding: 1.2em">
+        <div class="row">
+            <div class="col-md-12" style="padding: 1em">
+                <div class="row">
+                    <div class="col-md-3 ">
+                        <h3 class="d-flex justify-content-center">
+                            About Us
+                        </h3>
+                        <p class="d-flex justify-content-center" style="padding:2em">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. 
+                        </p>
+                    </div>
+                    <div class="col-md-3 ">
+                        <h3 class="d-flex justify-content-center">
+                            Quick Links
+                        </h3>
+                        <p> 
+                            <div>
+                                <a href="#" style="text-decoration: none;" class="d-flex justify-content-center">
+                                    <i class="bi-dot"></i> PRODUCTS
+                                </a>
+                            </div>
 
-    <div>
-        Footer
+                            <div>
+                                <a href="#" style="text-decoration: none;" class="d-flex justify-content-center">
+                                    <i class="bi-dot"></i> KNOWLEDGE & SUPPORT
+                                </a>
+                            </div>
+
+                            <div>
+                                <a href="#" style="text-decoration: none;" class="d-flex justify-content-center">
+                                    <i class="bi-dot"></i> CONTACT US
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" style="text-decoration: none;" class="d-flex justify-content-center">
+                                    <i class="bi-dot"></i> BLOG
+                                </a>    
+                            </div>
+                            
+                        </p>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center">
+                        <h3>
+                            Update & News
+                        </h3>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center">
+                        <h3>
+                            Latest Products
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="col-md-6">
+                {{ '@ '. now()->year .'. Globec Scientific Limited | '}} <a href="#">Privacy & Policy</a> | All Rights Reserved
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+                <i class="bi-dot"></i> Youtube
+                <i class="bi-dot"></i> Twitter
+                <i class="bi-dot"></i> Instagram
+                <i class="bi-dot"></i> FaceBook
+            </div>
+        </div>
     </div>
 </div>
