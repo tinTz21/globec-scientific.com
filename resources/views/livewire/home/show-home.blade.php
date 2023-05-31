@@ -130,7 +130,7 @@
         </div>
         <div class="row d-flex justify-content-center" style="padding-top: 1em;">
            <div class="col-md-3" style="margin-top: 1em">
-               <div class="card" style="width: 19rem;">
+               <div class="card" style="width: auto;">
                   <img src="images/cancer.jpg    " class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Multianalyte liquid biopsy</h5>
@@ -143,7 +143,7 @@
            </div>
 
            <div class="col-md-3" style="margin-top: 1em">
-               <div class="card" style="width: 19rem;">
+               <div class="card" style="width: auto;">
                   <img src="images/about.jpg    " class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">World Cancer Day highlights value of research</h5>
@@ -156,7 +156,7 @@
            </div>
 
            <div class="col-md-3" style="margin-top: 1em">
-               <div class="card" style="width: 19rem;">
+               <div class="card" style="width: auto;">
                   <img src="images/talk.png" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Sensitive mutation analysis of cfDNA by dPCR Q&As</h5>
@@ -169,7 +169,7 @@
            </div>
 
            <div class="col-md-3" style="margin-top: 1em">
-               <div class="card" style="width: 19rem;">
+               <div class="card" style="width: auto;">
                   <img src="images/computer.jpg    " class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Cell-free DNA from liquid biopsies</h5>
@@ -309,7 +309,7 @@
         
         <div class="row">
             <div class="col-md-4">
-                <div class="card">
+                <div class="card" style="margin-top: 1em">
                   <div class="card-body">
                     <!-- <h5 class="card-title">Card title</h5> -->
                     <p class="card-text d-flex justify-content-center" style="padding-top: 3em; padding-left: 3em; padding-right: 3em;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
@@ -331,7 +331,7 @@
             </div>
 
             <div class="col-md-4">
-                <div class="card">
+                <div class="card" style="margin-top: 1em">
                   <div class="card-body">
                     <!-- <h5 class="card-title">Card title</h5> -->
                     <p class="card-text d-flex justify-content-center" style="padding-top: 3em; padding-left: 3em; padding-right: 3em;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
@@ -351,9 +351,9 @@
                   </div>
                 </div>
             </div>
-
+            
             <div class="col-md-4">
-                <div class="card">
+                <div class="card" style="margin-top: 1em">
                   <div class="card-body">
                     <!-- <h5 class="card-title">Card title</h5> -->
                     <p class="card-text d-flex justify-content-center" style="padding-top: 3em; padding-left: 3em; padding-right: 3em;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
@@ -377,7 +377,7 @@
 
     </div>
 
-    <div class="container-fluid bg-light" style="padding: 1.2em; margin-bottom: 1em;">
+    <div class="container-fluid bg-light" style="padding: 1.2em;">
         <div class="row">
             <div class="col-md-12" style="padding: 1em">
                 <div class="row">
@@ -385,7 +385,7 @@
                         <h3 class="d-flex justify-content-center">
                             About Us
                         </h3>
-                        <p class="d-flex justify-content-center" style="padding:2em">
+                        <p class="d-flex justify-content-center" style="padding-left:2em">
                             This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. 
                         </p>
                     </div>
@@ -393,38 +393,57 @@
                         <h3 class="d-flex justify-content-center">
                             Quick Links
                         </h3>
-                        <p style="padding-top: 1em"> 
+                        <p> 
                             <div>
-                                <a href="#" style="text-decoration: none;" class="d-flex justify-content-center">
+                                <a href="#" style="text-decoration: none; padding-left: 1em;" class="d-flex justify-content-left">
                                     <i class="bi-dot"></i> PRODUCTS
                                 </a>
                             </div>
 
                             <div>
-                                <a href="#" style="text-decoration: none;" class="d-flex justify-content-center">
+                                <a href="#" style="text-decoration: none; padding-left: 1em;" class="d-flex justify-content-left">
                                     <i class="bi-dot"></i> KNOWLEDGE & SUPPORT
                                 </a>
                             </div>
 
                             <div>
-                                <a href="#" style="text-decoration: none;" class="d-flex justify-content-center">
+                                <a href="#" style="text-decoration: none; padding-left: 1em;" class="d-flex justify-content-left">
                                     <i class="bi-dot"></i> CONTACT US
                                 </a>
                             </div>
                             <div>
-                                <a href="#" style="text-decoration: none;" class="d-flex justify-content-center">
+                                <a href="#" style="text-decoration: none; padding-left: 1em;" class="d-flex justify-content-left">
                                     <i class="bi-dot"></i> BLOG
                                 </a>    
                             </div>
                             
                         </p>
                     </div>
-                    <div class="col-md-3 d-flex justify-content-center">
-                        <h3>
+                    <div class="col-md-3">
+                        <h3 class="d-flex justify-content-center">
                             Update & News
                         </h3>
+                        
+                        <a href="#" class="d-flex justify-content-left" style="text-decoration: none; padding-left: 1em;">
+                            <i class="bi-dot"></i> Multianalyte liquid biopsy
+                        </a>
+                        <a href="#" class="d-flex justify-content-left" style="text-decoration: none; padding-left: 1em;">
+                            <i class="bi-dot"></i> World Cancer Day highlights value of research
+                        </a>
+                        <a href="#" class="d-flex justify-content-left" style="text-decoration: none; padding-left: 1em;">
+                            <i class="bi-dot"></i> Sensitive mutation analysis of cfDNA by dPCR Q&As
+                        </a>
+                        <a href="#" class="d-flex justify-content-left" style="text-decoration: none; padding-left: 1em;">
+                            <i class="bi-dot"></i> Cell-free DNA from liquid biopsies
+                        </a>
+                        <a href="#" class="d-flex justify-content-left" style="text-decoration: none; padding-left: 1em;">
+                            <i class="bi-dot"></i> Multianalyte liquid biopsy
+                        </a>
+                       
+                        
                     </div>
-                    <div class="col-md-3 d-flex justify-content-center">
+
+                    <div class="col-md-3 d-flex justify-content-center" style="margin-top: 1em">
                         <h3>
                             Latest Products
                         </h3>
@@ -433,13 +452,18 @@
             </div>
             <hr>
             <div class="col-md-6">
-                {{ '@ '. now()->year .'. Globec Scientific Limited | '}} <a href="#" style="text-decoration: none;">Privacy & Policy</a> | All Rights Reserved
+                {{ '@ '. now()->year .' | All Rights Reserved by Globec Scientific Ltd | '}} <a href="#" style="text-decoration: none;">Privacy & Policy</a> 
             </div>
             <div class="col-md-6 d-flex justify-content-end">
-                <i class="bi-dot"></i> <a href="#" style="text-decoration: none">Youtube</a>
-                <i class="bi-dot"></i> <a href="#" style="text-decoration: none">Twitter</a>
-                <i class="bi-dot"></i> <a href="#" style="text-decoration: none">Instagram</a>
-                <i class="bi-dot"></i> <a href="#" style="text-decoration: none">FaceBook</a>
+                <i class="bi-youtube text-danger"></i> <a href="#" style="text-decoration: none">Youtube</a>
+                &nbsp; &nbsp;
+                <i class="bi-twitter text-primary"></i> <a href="#" style="text-decoration: none">Twitter</a>
+                &nbsp;&nbsp;
+                <i class="bi-instagram text-warning"></i> <a href="#" style="text-decoration: none">Instagram</a>
+                &nbsp;&nbsp;
+                <i class="bi-facebook"></i> <a href="#" style="text-decoration: none">FaceBook</a>
+                &nbsp; | &nbsp;&nbsp;
+                <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" style="text-decoration: none;">Log-in</a>
             </div>
         </div>
     </div>
