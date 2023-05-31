@@ -433,13 +433,13 @@
             </div>
             <hr>
             <div class="col-md-6">
-                {{ '@ '. now()->year .'. Globec Scientific Limited | '}} <a href="#">Privacy & Policy</a> | All Rights Reserved
+                {{ '@ '. now()->year .'. Globec Scientific Limited | '}} <a href="#" style="text-decoration: none;">Privacy & Policy</a> | All Rights Reserved
             </div>
             <div class="col-md-6 d-flex justify-content-end">
-                <i class="bi-dot"></i> <a href="#">Youtube</a>
-                <i class="bi-dot"></i> <a href="#">Twitter</a>
-                <i class="bi-dot"></i> <a href="#">Instagram</a>
-                <i class="bi-dot"></i> <a href="#">FaceBook</a>
+                <i class="bi-dot"></i> <a href="#" style="text-decoration: none">Youtube</a>
+                <i class="bi-dot"></i> <a href="#" style="text-decoration: none">Twitter</a>
+                <i class="bi-dot"></i> <a href="#" style="text-decoration: none">Instagram</a>
+                <i class="bi-dot"></i> <a href="#" style="text-decoration: none">FaceBook</a>
             </div>
         </div>
     </div>
