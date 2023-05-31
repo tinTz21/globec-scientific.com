@@ -361,7 +361,7 @@
                     </p>
                     <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
                   </div>
-                  <img src="images/cancer.jpg" class="rounded-pill d-flex justify-content-center" style="width: 10em !important; margin-left: 9em;" alt="...">
+                  <img src="images/cancer.jpg" class="rounded-circle d-flex justify-content-center" style="width: 10em !important; margin-left: 9em;" alt="...">
 
                   <div class="card-body">
                     <h4 class="d-flex justify-content-center">
@@ -393,7 +393,7 @@
                         <h3 class="d-flex justify-content-center">
                             Quick Links
                         </h3>
-                        <p style="padding-top: 2em"> 
+                        <p style="padding-top: 1em"> 
                             <div>
                                 <a href="#" style="text-decoration: none;" class="d-flex justify-content-center">
                                     <i class="bi-dot"></i> PRODUCTS
