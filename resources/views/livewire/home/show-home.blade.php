@@ -361,7 +361,7 @@
                     </p>
                     <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
                   </div>
-                  <img src="images/cancer.jpg" class="rounded-circle d-flex justify-content-center" style="width: 10em !important; margin-left: 9em;" alt="...">
+                  <img src="images/cancer.jpg" class="rounded-pill d-flex justify-content-center" style="width: 10em !important; margin-left: 9em;" alt="...">
 
                   <div class="card-body">
                     <h4 class="d-flex justify-content-center">
@@ -377,7 +377,7 @@
 
     </div>
 
-    <div class="container-fluid bg-light" style="padding: 1.2em">
+    <div class="container-fluid bg-light" style="padding: 1.2em; margin-bottom: 1em;">
         <div class="row">
             <div class="col-md-12" style="padding: 1em">
                 <div class="row">
