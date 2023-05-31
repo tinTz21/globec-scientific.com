@@ -436,10 +436,10 @@
                 {{ '@ '. now()->year .'. Globec Scientific Limited | '}} <a href="#">Privacy & Policy</a> | All Rights Reserved
             </div>
             <div class="col-md-6 d-flex justify-content-end">
-                <i class="bi-dot"></i> Youtube
-                <i class="bi-dot"></i> Twitter
-                <i class="bi-dot"></i> Instagram
-                <i class="bi-dot"></i> FaceBook
+                <i class="bi-dot"></i> <a href="#">Youtube</a>
+                <i class="bi-dot"></i> <a href="#">Twitter</a>
+                <i class="bi-dot"></i> <a href="#">Instagram</a>
+                <i class="bi-dot"></i> <a href="#">FaceBook</a>
             </div>
         </div>
     </div>
