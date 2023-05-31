@@ -393,7 +393,7 @@
                         <h3 class="d-flex justify-content-center">
                             Quick Links
                         </h3>
-                        <p> 
+                        <p style="padding-top: 2em"> 
                             <div>
                                 <a href="#" style="text-decoration: none;" class="d-flex justify-content-center">
                                     <i class="bi-dot"></i> PRODUCTS
