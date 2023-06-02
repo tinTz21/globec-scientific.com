@@ -79,7 +79,9 @@
 
         <main class="py-4">
             @yield('content')
-            @livewire('home.footer')
+            @if(Auth::user())
+                @livewire('home.footer')
+            @endif
         </main>
 
     </div>
