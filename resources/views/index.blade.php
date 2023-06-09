@@ -22,7 +22,7 @@
         @livewireStyles
     </head>
     <body> 
-        <div class="container-fluid " style="background-color: #6C757D;">
+        <div class="container-fluid " style="background-color: #017C7A;">
             @livewire('home.secondary-menu')
             @livewire('home.primary-menu')
             @livewire('home.show-home')

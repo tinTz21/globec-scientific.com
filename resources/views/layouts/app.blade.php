@@ -83,7 +83,7 @@
                 @livewire('home.footer')
             @endif
         </main>
-
+        
     </div>
 </body>
 </html>

@@ -3,7 +3,7 @@
     <div class="container-fluid bg-light">
         <div class="row">
             <div class="col-md-6" style="padding: 5em;">
-                <h1>
+                <h1 style="color: #017C7A;">
                     Hello! Welcome into my world
                 </h1>
                 <p>
@@ -12,8 +12,8 @@
                     I am Charles Magome, a Biomedical Engineer and technology enthusiast with a passion for using my skills and knowledge to make a positive impact on the world. 
                 </p>
 
-                <a href="#" class="btn btn-outline-secondary rounded-pill" style="padding: 0.5em">
-                    About Me
+                <a href="#" class="btn btn-outline-light rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
+                    About Globec
                 </a>
             </div>
             <div class="col-md-6" style="padding: 2em">
@@ -60,6 +60,118 @@
             </div>
         </div>
     </div>
+
+
+    <!-- products -->
+    <div class="container-fluid bg-light" style="padding:2em; margin-top: 1em;">
+        <div class="row">
+            <div class="col-md-12" >
+                <h1 style="padding-left: 1em; color: #017C7A;">
+                    Our Products and Solutions
+                </h1>
+                &nbsp;
+            </div>
+        
+            <div class="col-md-6">
+                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-6">
+                      <img src="images/bed.jpeg" style="margin-top: 1em" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: #017C7A;">Hospital Bed</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.little bit longer.littl
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-0" style="padding: 1em">
+                       <a class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
+                            <i class="bi-cart"></i> Place Order
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-6">
+                      <img src="images/meter.jpg" style="margin-top: 1em" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: #017C7A;">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.little bit longer.littl</p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-0" style="padding: 1em">
+                        <a class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
+                            <i class="bi-cart"></i> Place Order
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-6">
+                      <img src="images/tube.jpeg" style="padding: 12%" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: #017C7A;">Card title</h5>
+                        
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-0" style="padding: 1em">
+                        <a class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
+                            <i class="bi-cart"></i> Place Order
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-6">
+                      <img src="images/ultrasound.jpeg" style="margin-top: 5%" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: #017C7A;">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                        
+                      </div>
+                    </div>
+                    <div class="row g-0" style="padding: 1em">
+                        <a class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
+                            <i class="bi-cart"></i> Place Order
+                        </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End products -->
+
 
     <div class="container-fluid bg-transparent" style=" margin-top: 1em">
         <div class="row ">
@@ -113,10 +225,6 @@
                     <i class="bi-arrow-right-circle text-light text-primary d-flex justify-content-center" style="font-size: 2rem;"></i>
                 </div>
             </div>
-
-            
-
-            
         </div>
     </div>
 
@@ -124,8 +232,8 @@
 
     <div class="container-fluid bg-light" style="padding: 2em; margin-top: 1em;">
         <div class="container-fluid">
-            <h1>
-                What's new?
+            <h1 style="color: #017C7A;">
+                News
             </h1>
         </div>
         <div class="row d-flex justify-content-center" style="padding-top: 1em;">
@@ -137,7 +245,7 @@
                     <p class="card-text">
                         Join our three part webinar series to learn how to isolate multianalytes from blood samples. And how to analyze cfDNA using NGS and dPCR. Sign up for May 9–23. Sign up for May 9–23. Sign up for May 9–23. 
                     </p>
-                    <a href="#" class="btn btn-outline-primary rounded-pill">Learn More...</a>
+                    <a href="#" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">Learn More...</a>
                   </div>
                 </div>
            </div>
@@ -150,7 +258,7 @@
                     <p class="card-text">
                         Why is cancer research important to you? Would Cancer Day is a great time to reflect on the value of cancer research. o analyze cfDNA using NGS and dPCR. Sign up for May 9–23.
                     </p>
-                    <a href="#" class="btn btn-outline-primary rounded-pill">Learn More...</a>
+                    <a href="#" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">Learn More...</a>
                   </div>
                 </div>
            </div>
@@ -163,7 +271,7 @@
                     <p class="card-text">
                         Our panel of experts answer your questions and share their tips for sensitive mutation analysis of cfDNA by digital PCR. Enjoy the discussion about cfDNA sample processing 
                     </p>
-                    <a href="#" class="btn btn-outline-primary rounded-pill">Learn More...</a>
+                    <a href="#" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">Learn More...</a>
                   </div>
                 </div>
            </div>
@@ -176,118 +284,11 @@
                     <p class="card-text">
                         From biomarker research to personalized medicine, cell-free DNA isolated from liquid biopsies provides a powerful method to monitor cancer development in future. Enjoy three
                     </p>
-                    <a href="#" class="btn btn-outline-primary rounded-pill">Learn More...</a>
+                    <a href="#" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">Learn More...</a>
                   </div>
                 </div>
            </div>
 
-
-        </div>
-    </div>
-
-    <div class="container-fluid bg-light" style="padding:2em; margin-top: 1em;">
-        <div class="row">
-            <div class="col-md-12" >
-                <h1>
-                    Featured Products – See our favorites
-                </h1>
-                &nbsp;
-            </div>
-        
-            <div class="col-md-6">
-                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
-                  <div class="row g-0">
-                    <div class="col-md-6">
-                      <img src="images/bed.jpeg" style="margin-top: 26%" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card-body">
-                        <h5 class="card-title">Hospital Bed</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.little bit longer.littl
-                        </p>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row g-0" style="padding: 1em">
-                       <a class="form-control btn btn-outline-secondary rounded-pill">
-                            <i class="bi-cart"></i> Place Order
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
-                  <div class="row g-0">
-                    <div class="col-md-6">
-                      <img src="images/meter.jpg" style="margin-top: 5%" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.little bit longer.littl</p>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row g-0" style="padding: 1em">
-                        <a class="form-control btn btn-outline-secondary rounded-pill">
-                            <i class="bi-cart"></i> Place Order
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
-                  <div class="row g-0">
-                    <div class="col-md-6">
-                      <img src="images/tube.jpeg" style="padding: 12%" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                        </p>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row g-0" style="padding: 1em">
-                        <a class="form-control btn btn-outline-secondary rounded-pill">
-                            <i class="bi-cart"></i> Place Order
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
-                  <div class="row g-0">
-                    <div class="col-md-6">
-                      <img src="images/ultrasound.jpeg" style="margin-top: 5%" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                        </p>
-                        
-                      </div>
-                    </div>
-                    <div class="row g-0" style="padding: 1em">
-                        <a class="form-control btn btn-outline-secondary rounded-pill">
-                            <i class="bi-cart"></i> Place Order
-                        </a>
-                    </div>
-                  </div>
-                </div>
-            </div>
 
         </div>
     </div>
@@ -320,11 +321,11 @@
                   <img src="images/cancer.jpg" class="rounded-pill d-flex justify-content-center" style="width: 10em !important; margin-left: 9em;" alt="...">
 
                   <div class="card-body">
-                    <h4 class="d-flex justify-content-center">
+                    <h4 class="d-flex justify-content-center" style="color: #017C7A;">
                         Debora Augustino
                     </h4>
-                    <p class="d-flex justify-content-center">
-                        Marketing Manager
+                    <p class="d-flex justify-content-center" style="color: #017C7A;">
+                        <i class="bi-dot"></i>Marketing Manager
                     </p>
                   </div>
                 </div>
@@ -342,11 +343,11 @@
                   <img src="images/cancer.jpg" class="rounded-pill d-flex justify-content-center" style="width: 10em !important; margin-left: 9em;" alt="...">
 
                   <div class="card-body">
-                    <h4 class="d-flex justify-content-center">
+                    <h4 class="d-flex justify-content-center" style="color: #017C7A;">
                         Debora Augustino
                     </h4>
-                    <p class="d-flex justify-content-center">
-                        Marketing Manager
+                    <p class="d-flex justify-content-center" style="color: #017C7A;">
+                        <i class="bi-dot"></i>Marketing Manager
                     </p>
                   </div>
                 </div>
@@ -364,11 +365,11 @@
                   <img src="images/cancer.jpg" class="rounded-pill d-flex justify-content-center" style="width: 10em !important; margin-left: 9em;" alt="...">
 
                   <div class="card-body">
-                    <h4 class="d-flex justify-content-center">
+                    <h4 class="d-flex justify-content-center" style="color: #017C7A;">
                         Debora Augustino
                     </h4>
-                    <p class="d-flex justify-content-center">
-                        Marketing Manager
+                    <p class="d-flex justify-content-center" style="color: #017C7A;">
+                        <i class="bi-dot"></i>Marketing Manager
                     </p>
                   </div>
                 </div>

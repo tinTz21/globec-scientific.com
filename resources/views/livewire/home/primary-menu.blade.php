@@ -6,22 +6,24 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="/">GS-Logo</a>
+          <a class="navbar-brand" href="/">
+            <img src="images/logo.jpg" width="100em">
+          </a>
           <ul class="navbar-nav me-auto  mb-2 mb-lg-0 ">
             <li class="nav-item">
-              <a class="nav-link text-dark" aria-current="page" href="#"><b> </b></a>
+              <a class="nav-link" style="color: #017C7A;" aria-current="page" href="#"><b>ABOUT GLOBEC</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#"><b>PRODUCTS</b></a>
+              <a class="nav-link" style="color: #017C7A;" href="#"><b>PRODUCTS AND SOLUTIONS</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#"><b>KNOWLEDGE & SUPPORT</b></a>
+              <a class="nav-link" style="color: #017C7A;" href="#"><b>CAREERS</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark "><b>CONTACT US</b></a>
+              <a class="nav-link"  style="color: #017C7A;"><b>CONTACT US</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#"><b>BLOG</b></a>
+              <a class="nav-link" style="color: #017C7A;" href="#"><b>NEWS</b></a>
             </li>
           </ul>
           <form class="d-flex" role="search">
