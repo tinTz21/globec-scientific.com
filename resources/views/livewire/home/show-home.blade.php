@@ -2,7 +2,7 @@
     {{-- Close your eyes. Count to one. That is how long forever feels. --}}
     <div class="container-fluid bg-light">
         <div class="row">
-            <div class="col-md-6" style="padding: 5em;">
+            <div class="col-md-6" style="padding: 3em;">
                 <h1 style="color: #017C7A;">
                     Hello! Welcome into my world
                 </h1>
@@ -293,7 +293,7 @@
         </div>
     </div>
 
-    <div class="container bg-transparent" style="padding:2em; margin-top: 1em;">
+    <div class="container bg-transparent" style=" margin-top: 1em;">
         <div class="row">
             <div class="col-md-12 " >
                 <h1 class="d-flex justify-content-center text-light">
@@ -318,7 +318,7 @@
                     </p>
                     <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
                   </div>
-                  <img src="images/cancer.jpg" class="rounded-pill d-flex justify-content-center" style="width: 10em !important; margin-left: 9em;" alt="...">
+                  <img src="images/cancer.jpg" class="rounded-pill d-flex justify-content-center" style="width: 10em !important; margin-left: 7em;" alt="...">
 
                   <div class="card-body">
                     <h4 class="d-flex justify-content-center" style="color: #017C7A;">
@@ -340,7 +340,7 @@
                     </p>
                     <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
                   </div>
-                  <img src="images/cancer.jpg" class="rounded-pill d-flex justify-content-center" style="width: 10em !important; margin-left: 9em;" alt="...">
+                  <img src="images/cancer.jpg" class="rounded-pill d-flex justify-content-center" style="width: 10em !important; margin-left: 7em;" alt="...">
 
                   <div class="card-body">
                     <h4 class="d-flex justify-content-center" style="color: #017C7A;">
@@ -362,7 +362,7 @@
                     </p>
                     <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
                   </div>
-                  <img src="images/cancer.jpg" class="rounded-pill d-flex justify-content-center" style="width: 10em !important; margin-left: 9em;" alt="...">
+                  <img src="images/cancer.jpg" class="rounded-pill d-flex justify-content-center" style="width: 10em !important; margin-left: 7em;" alt="...">
 
                   <div class="card-body">
                     <h4 class="d-flex justify-content-center" style="color: #017C7A;">

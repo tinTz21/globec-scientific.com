@@ -1,6 +1,6 @@
-<div>
+<div style="margin-top: 1em">
     {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
-    <div class="container-fluid bg-light" style="padding: 1.2em;">
+    <div class="container-fluid bg-light" style="padding: 1em;">
         <div class="row">
             <div class="col-md-12" style="padding: 1em">
                 <div class="row">
@@ -79,8 +79,6 @@
                 <!-- <a href="#" style="text-decoration: none;">Privacy & Policy</a>  -->
             </div>
             <div class="col-md-6 d-flex justify-content-end">
-                <i class="bi-youtube text-danger"></i> <a href="#" style="text-decoration: none">Youtube</a>
-                &nbsp; &nbsp;
                 <i class="bi-twitter text-primary"></i> <a href="#" style="text-decoration: none">Twitter</a>
                 &nbsp;&nbsp;
                 <i class="bi-instagram text-warning"></i> <a href="#" style="text-decoration: none">Instagram</a>
