@@ -26,6 +26,7 @@
             @livewire('home.secondary-menu')
             @livewire('home.primary-menu')
             @livewire('home.show-home')
+            @livewire('home.footer')
         </div>
         @livewireScripts
     </body>

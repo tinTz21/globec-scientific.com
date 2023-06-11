@@ -375,8 +375,5 @@
                 </div>
             </div>
         </div>
-
     </div>
-
-    @livewire('home.footer')
 </div>
