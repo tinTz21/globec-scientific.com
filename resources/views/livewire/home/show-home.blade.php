@@ -75,8 +75,8 @@
             <div class="col-md-6">
                 <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
                   <div class="row g-0">
-                    <div class="col-md-6">
-                      <img src="images/bed.jpeg" style="margin-top: 1em" class="img-fluid rounded-start" alt="...">
+                    <div class="col-md-6 ">
+                      <img src="images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-6">
                       <div class="card-body">
@@ -100,7 +100,7 @@
                 <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
                   <div class="row g-0">
                     <div class="col-md-6">
-                      <img src="images/meter.jpg" style="margin-top: 1em" class="img-fluid rounded-start" alt="...">
+                      <img src="images/meter.jpg" width="100%" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-6">
                       <div class="card-body">
@@ -123,7 +123,7 @@
                 <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
                   <div class="row g-0">
                     <div class="col-md-6">
-                      <img src="images/tube.jpeg" style="padding: 12%" class="img-fluid rounded-start" alt="...">
+                      <img src="images/tube.jpeg" width="100%" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-6">
                       <div class="card-body">
@@ -148,7 +148,7 @@
                 <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
                   <div class="row g-0">
                     <div class="col-md-6">
-                      <img src="images/ultrasound.jpeg" style="margin-top: 5%" class="img-fluid rounded-start" alt="...">
+                      <img src="images/ultrasound.jpeg" width="100%" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-6">
                       <div class="card-body">

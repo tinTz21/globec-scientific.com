@@ -26,7 +26,27 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function view_home(){
-        dd(123);
+    public function about(){
+        return view('dashboard.about');
+    }  
+
+    public function products(){
+        return view('dashboard.products');
+    }  
+
+    public function career(){
+        return view('dashboard.career');
+    }
+
+    public function contact_us(){
+        return view('dashboard.contact_us');
+    }
+
+    public function news(){
+        return view('dashboard.news');
+    } 
+
+    public function testimonies(){
+        return view('dashboard.testimonies');
     }
 }

@@ -73,19 +73,26 @@
                     </div>
                 </div>
             </div>
+
+
+            
             <hr>
-            <div class="col-md-6">
-                {{ '@ '. now()->year .' | All Rights Reserved by Globec Scientific Ltd '}} 
-                <!-- <a href="#" style="text-decoration: none;">Privacy & Policy</a>  -->
-            </div>
-            <div class="col-md-6 d-flex justify-content-end">
-                <i class="bi-twitter text-primary"></i> <a href="#" style="text-decoration: none">Twitter</a>
-                &nbsp;&nbsp;
-                <i class="bi-instagram text-warning"></i> <a href="#" style="text-decoration: none">Instagram</a>
-                &nbsp;&nbsp;
-                <i class="bi-facebook"></i> <a href="#" style="text-decoration: none">FaceBook</a>
-                &nbsp; | &nbsp;&nbsp;
-                <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" style="text-decoration: none;">Log-in</a>
+            <div class="row">
+                <div class="col-md-9">
+                    {{ '@ '. now()->year .' | All Rights Reserved by Globec Scientific Ltd '}} 
+                    <!-- <a href="#" style="text-decoration: none;">Privacy & Policy</a>  -->
+                </div>
+                
+                <div class="col-md-3 d-flex justify-content-center">
+
+                    <i class="bi-twitter text-primary"></i> <a href="#" style="text-decoration: none">Twitter</a>
+                    &nbsp;&nbsp;
+                    <i class="bi-instagram text-warning"></i> <a href="#" style="text-decoration: none">Instagram</a>
+                    &nbsp;&nbsp;
+                    <i class="bi-facebook"></i> <a href="#" style="text-decoration: none">FaceBook</a>
+                    &nbsp; | &nbsp;&nbsp;
+                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" style="text-decoration: none;">Log-in</a>
+                </div>
             </div>
         </div>
     </div>
