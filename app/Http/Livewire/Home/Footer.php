@@ -3,11 +3,16 @@
 namespace App\Http\Livewire\Home;
 
 use Livewire\Component;
+use App\Models\About;
 
 class Footer extends Component
 {
     public function render()
     {
-        return view('livewire.home.footer');
+        $about= About::firstOrFail();
+        $data = [
+            'about'=>$about,
+        ];
+        return view('livewire.home.footer')->with($data);
     }
 }

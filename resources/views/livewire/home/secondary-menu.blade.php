@@ -6,7 +6,8 @@
             <div class="col-md-11">
                 <i class="bi-telephone-fill text-light" style="font-size: 1rem;"></i> +255 653 502 932
                 &nbsp; &nbsp;
-                <i class="bi-envelope text-light" style="font-size: 1rem;"></i> charles@globecscientific.com 
+                <i class="bi-envelope text-light" style="font-size: 1rem;"></i> 
+                charles@globecscientific.com
             </div>
 
             <div class="col-md-1 d-flex justify-content-center">

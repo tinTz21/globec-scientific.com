@@ -1,13 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid">
-    <div class="row justify-content-center">
+<div class="container-fluid" style="margin-top: 1em;">
+    <div class="row ">
         <div class="col-md-12">
 
-
-            
-            <div class="card">
+            <div class="card ">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
@@ -21,7 +19,7 @@
                         <div class="col-md-4" style="margin-top: 1em;">
                             <div class="card">
                                 <div class="card-header">
-                                    Products
+                                    Products & Solutions
                                 </div>
                                 <div class="card-body">
                                     
@@ -35,7 +33,7 @@
                         <div class="col-md-4" style="margin-top: 1em;">
                             <div class="card">
                                 <div class="card-header">
-                                    Training
+                                    Careers
                                 </div>
                                 <div class="card-body">
                                     
@@ -49,7 +47,7 @@
                         <div class="col-md-4" style="margin-top: 1em;">
                             <div class="card">
                                 <div class="card-header">
-                                    
+                                    News
                                 </div>
                                 <div class="card-body">
                                     
@@ -63,35 +61,7 @@
                         <div class="col-md-4" style="margin-top: 1em;">
                             <div class="card">
                                 <div class="card-header">
-                                    
-                                </div>
-                                <div class="card-body">
-                                    
-                                </div>
-                                <div class="card-footer">
-                                    
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4" style="margin-top: 1em;">
-                            <div class="card">
-                                <div class="card-header">
-                                    
-                                </div>
-                                <div class="card-body">
-                                    
-                                </div>
-                                <div class="card-footer">
-                                    
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4" style="margin-top: 1em;">
-                            <div class="card">
-                                <div class="card-header">
-                                    Blogs
+                                    Testimonials
                                 </div>
                                 <div class="card-body">
                                     
@@ -105,12 +75,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
 
         </div>
     </div>

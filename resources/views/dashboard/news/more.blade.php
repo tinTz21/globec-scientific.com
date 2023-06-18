@@ -13,29 +13,29 @@
             </div>
             
             <div class="row d-flex justify-content-center" style="padding-top: 1em;">
-               @foreach($news as $blog)
-               <div class="col-md-4" style="margin-top: 1em">
+             
+               <div class="col-md-12" style="margin-top: 1em">
                    <div class="card" style="width: auto;">
                       <img src="/images/cancer.jpg    " class="card-img-top" alt="...">
                       <div class="card-body">
                         <h5 class="card-title">
-                            {{$blog->name}}
+                            {{$news->name}}
                         </h5>
                         <p class="card-text">
-                            {{$blog->description}} 
+                            {{$news->description}} 
                         </p>
 
-                        <a href="{{route('edit-news',$blog->id)}}" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">Edit</a>
-                        <a href="{{route('delete-news',@$blog->id)}}" class="btn btn-outline-secondary text-danger rounded-pill" style="border-color: red; color: red;">
+                        <a href="{{route('edit-news',$news->id)}}" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">Edit</a>
+                        <a href="{{route('delete-news',@$news->id)}}" class="btn btn-outline-secondary text-danger rounded-pill" style="border-color: red; color: red;">
                             <i class="bi-trash"></i> Delete
                         </a>
-                        <a href="{{route('more-news',@$blog->id)}}" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">
+                        <a href="{{route('more-news',@$news->id)}}" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">
                             Learn More
                         </a>
                       </div>
                     </div>
                </div>
-               @endforeach
+               
             </div>
         </div>
 

@@ -8,7 +8,7 @@
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <!-- Styles -->
         <style>
-            <!-- Scripts -->
+            <!-- Scripts --> 
             <script src="{{ asset('js/app.js') }}" defer></script>
             <!-- Styles -->
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -25,7 +25,7 @@
         <div class="container-fluid " style="background-color: #017C7A;">
             @livewire('home.secondary-menu')
             @livewire('home.primary-menu')
-            @livewire('home.show-home')
+            @yield('content')
             @livewire('home.footer')
         </div>
         @livewireScripts

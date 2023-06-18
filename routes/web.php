@@ -1,7 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController; 
+use App\Http\Controllers\ProductController; 
+use App\Http\Controllers\CareerController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\NewsController;
+ 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,16 +27,57 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); 
+Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth'); 
 
-Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
+Route::get('/dashboard/about', [HomeController::class, 'about'])->name('about')->middleware('auth');
 
-Route::get('/products', [App\Http\Controllers\HomeController::class, 'products'])->name('products');
+Route::get('/dashboard/about/edit/{id}', [HomeController::class, 'edit_about'])->name('edit-about')->middleware('auth');
 
-Route::get('/career', [App\Http\Controllers\HomeController::class, 'career'])->name('career');
+Route::post('/dashboard/about/store/{id}', [HomeController::class, 'store_about'])->name('store-about')->middleware('auth');
 
-Route::get('/contact_us', [App\Http\Controllers\HomeController::class, 'contact_us'])->name('contact_us');
+Route::get('/dashboard/products', [HomeController::class, 'products'])->name('products')->middleware('auth');
 
-Route::get('/news', [App\Http\Controllers\HomeController::class, 'news'])->name('news');
+Route::get('/dashboard/products/add', [HomeController::class, 'add_product'])->name('add-product')->middleware('auth'); 
 
-Route::get('/testimonies', [App\Http\Controllers\HomeController::class, 'testimonies'])->name('testimonies');
+Route::post('/dashboard/products/store', [HomeController::class, 'store_product'])->name('store_product')->middleware('auth');
+
+Route::get('/dashboard/products/edit/{id}', [HomeController::class, 'edited_product'])->name('edit-product')->middleware('auth'); 
+
+Route::get('/dashboard/products/delete/{id}', [HomeController::class, 'delete_product'])->name('delete_product')->middleware('auth');
+
+Route::get('/dashboard/products/destroy/{id}', [HomeController::class, 'destroy_product'])->name('destroy-product')->middleware('auth');
+
+Route::get('/dashboard/career', [HomeController::class, 'career'])->name('career')->middleware('auth');
+
+Route::get('/dashboard/contact_us', [HomeController::class, 'contact_us'])->name('contact_us')->middleware('auth');
+
+
+
+Route::get('/dashboard/testimonies', [HomeController::class, 'testimonies'])->name('testimonies')->middleware('auth');
+
+Route::get('/about', [AboutController::class, 'about'])->name('home-about');
+
+Route::get('/product_and_solutions', [ProductController::class, 'index'])->name('home-product');
+
+Route::get('/career', [CareerController::class, 'index'])->name('home-career');
+
+Route::get('/contact-us', [ContactController::class, 'index'])->name('home-contact');
+
+Route::get('/dashboard/contact-us/{id}', [ContactController::class, 'edit'])->name('edit-contact');
+ 
+Route::post('/dashboard/contact-us/store/{id}', [ContactController::class, 'store'])->name('store-contact');
+
+// News Controllers
+Route::get('/dashboard/news', [HomeController::class, 'news'])->name('news')->middleware('auth');
+
+Route::get('/news', [NewsController::class, 'index'])->name('home-news')->middleware('auth');
+
+Route::get('/dashboard/news/{id}', [NewsController::class, 'edit_news'])->name('edit-news')->middleware('auth');
+
+Route::post('/dashboard/news/store/{id}', [NewsController::class, 'store_news'])->name('store-news')->middleware('auth');
+
+Route::get('/dashboard/news/delete/{id}', [NewsController::class, 'show'])->name('delete-news')->middleware('auth'); 
+
+Route::post('/dashboard/news/destroy/{id}', [NewsController::class, 'destroy'])->name('destroy-news')->middleware('auth');
+
+Route::get('/dashboard/news/more/{id}', [NewsController::class, 'more'])->name('more-news')->middleware('auth');

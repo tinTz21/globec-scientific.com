@@ -6,10 +6,10 @@
                 <div class="row">
                     <div class="col-md-3 ">
                         <h3 class="d-flex justify-content-center" style="color: #017C7A;">
-                            About Us
+                            About Globec
                         </h3>
                         <p class="d-flex justify-content-center" style="padding-left:2em">
-                            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. 
+                            {{$about->description}}
                         </p>
                     </div>
                     <div class="col-md-3 ">
@@ -18,25 +18,31 @@
                         </h3>
                         <p> 
                             <div>
-                                <a href="#" style="text-decoration: none; padding-left: 1em; color: #33BAFA;" class="d-flex justify-content-left">
-                                    <i class="bi-dot"></i> PRODUCTS
+                                <a href="{{route('home-about')}}" style="text-decoration: none; padding-left: 1em; color: #33BAFA;" class="d-flex justify-content-left">
+                                    <i class="bi-dot"></i> About Globec
                                 </a>
                             </div>
 
                             <div>
-                                <a href="#" style="text-decoration: none; padding-left: 1em; color: #33BAFA;" class="d-flex justify-content-left">
-                                    <i class="bi-dot"></i> KNOWLEDGE & SUPPORT
+                                <a href="{{route('home-contact')}}" style="text-decoration: none; padding-left: 1em; color: #33BAFA;" class="d-flex justify-content-left">
+                                    <i class="bi-dot"></i> Contact Us
+                                </a>
+                            </div>  
+
+                            <div>
+                                <a href="{{route('home-product')}}" style="text-decoration: none; padding-left: 1em; color: #33BAFA;" class="d-flex justify-content-left">
+                                    <i class="bi-dot"></i> Products and Solutions
                                 </a>
                             </div>
 
                             <div>
-                                <a href="#" style="text-decoration: none; padding-left: 1em; color: #33BAFA;" class="d-flex justify-content-left">
-                                    <i class="bi-dot"></i> CONTACT US
+                                <a href="{{route('home-career')}}" style="text-decoration: none; padding-left: 1em; color: #33BAFA;" class="d-flex justify-content-left">
+                                    <i class="bi-dot"></i> Career
                                 </a>
                             </div>
                             <div>
-                                <a href="#" style="text-decoration: none; padding-left: 1em; color: #33BAFA;" class="d-flex justify-content-left">
-                                    <i class="bi-dot"></i> BLOG
+                                <a href="{{route('home-news')}}" style="text-decoration: none; padding-left: 1em; color: #33BAFA;" class="d-flex justify-content-left">
+                                    <i class="bi-dot"></i> News
                                 </a>    
                             </div>
                             

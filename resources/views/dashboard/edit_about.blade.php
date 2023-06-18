@@ -5,16 +5,21 @@
     <div class="row justify-content-center">
         <div class="col-md-12 bg-light" style="margin-top: 1em; padding: 2em;">
             <div class="row">
-                <div class="col-md-8">
-                    <h1>
-                        {{$about->name}}
-                    </h1>
-                    <p>
-                        {{$about->description}}
-                    </p>
-                    <a href="{{route('edit-about',$about->id)}}" class="btn btn-outline-secondary">
-                        Edit
-                    </a>
+                <div class="col-md-8 border" style="padding: 1em;">
+                    <form method="POST" action="{{route('store-about',@$about->id)}}" enctype="multipart/form-data">
+                        @csrf
+                        <h1>
+                        <input type="text" name="name" value="{{@$about->name}}" class="form-control">
+                        </h1>
+                        <p>
+                            <textarea rows="6" name="description" class="form-control" required>
+                                {{@$about->description}}
+                            </textarea>
+                        </p>
+                        <button type="submit" class="btn btn-outline-secondary">
+                            Save
+                        </button>
+                    </form>
                 </div>
                 <div class="col-md-4">
 

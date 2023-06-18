@@ -12,19 +12,25 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto  mb-2 mb-lg-0 ">
                       <li class="nav-item">
-                        <a class="nav-link" style="color: #017C7A;" aria-current="page" href="#"><b>ABOUT GLOBEC</b></a>
+                        <a class="nav-link" style="color: #017C7A;" aria-current="page" href="{{route('home-about')}}">
+                            <b>ABOUT GLOBEC</b>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" style="color: #017C7A;" href="#"><b>PRODUCTS AND SOLUTIONS</b></a>
+                        <a class="nav-link"  style="color: #017C7A;" href="{{route('home-contact')}}">
+                            <b>CONTACT US</b>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" style="color: #017C7A;" href="#"><b>CAREERS</b></a>
+                        <a class="nav-link" style="color: #017C7A;" href="{{route('home-product')}}"><b>PRODUCTS AND SOLUTIONS</b></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link"  style="color: #017C7A;"><b>CONTACT US</b></a>
+                        <a class="nav-link" style="color: #017C7A;" href="{{route('home-career')}}"><b>CAREERS</b></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" style="color: #017C7A;" href="#"><b>NEWS</b></a>
+                        <a class="nav-link" style="color: #017C7A;" href="{{route('home-news')}}">
+                            <b>NEWS</b>
+                        </a>
                       </li>
                     </ul>
                     <form class="d-flex" role="search">

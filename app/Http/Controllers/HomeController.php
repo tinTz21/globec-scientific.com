@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\About;
+use App\Models\Product;
+use App\Models\Contact;
+use App\Models\News;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -27,23 +32,93 @@ class HomeController extends Controller
     }
 
     public function about(){
-        return view('dashboard.about');
-    }  
+        $about = About::first();
+        $data = [
+            'about'=>$about,
+        ];
+        return view('dashboard.about')->with($data);
+    } 
+
+    public function edit_about($id){
+        $about = About::find($id);
+        $data = [
+            'about'=>$about,
+        ];
+        return view('dashboard.edit_about')->with($data);
+    } 
+
+    public function store_about(Request $request, $id){
+        $store = About::updateOrCreate(
+            ['id'=>$id,],
+            ['name'=>$request->name, 'description'=>$request->description]
+        );
+        return redirect()->route('about')->with('success','Successful! About Globec Is Edited.');
+    }
 
     public function products(){
-        return view('dashboard.products');
+        $products = Product::latest()->get();
+        $data = [
+            'products'=>$products,
+        ];
+        return view('dashboard.products')->with($data);
     }  
+
+    public function add_product(){
+        return view('dashboard.add_product');
+    }
+
+    public function store_product(Request $request){
+        $request->validate([
+            'name' => 'required',
+            'description'=>'required'
+        ]);
+        $product = Product::updateOrCreate(
+            ['id'=>$request->id],
+            ['name'=>$request->name,'description'=>$request->description,'translator_id'=>Auth::user()->id, 'updator_id'=>Auth::user()->id]
+        );
+        return redirect()->route('products');
+    }
+
+    public function edited_product(Request $request, $id){
+        $product = Product::find($id);
+        $data = [
+            'product'=>$product,
+        ];
+        return view('dashboard.edit_product')->with($data);
+    }
+
+    public function delete_product($id){
+        $product = Product::find($id);
+        $data = [
+            'product'=>$product,
+        ];
+        return view('dashboard.delete_product')->with($data);
+    }
+
+    public function destroy_product($id){
+        $product = Product::find($id);
+        $product->delete();
+        return redirect()->route('products');
+    }
 
     public function career(){
         return view('dashboard.career');
     }
 
     public function contact_us(){
-        return view('dashboard.contact_us');
+        $contact = Contact::first();
+        $data = [
+            'contact' => $contact,
+        ];
+        return view('dashboard.contact_us')->with($data);
     }
 
     public function news(){
-        return view('dashboard.news');
+        $news = News::latest()->get();
+        $data = [
+            'news'=>$news,
+        ];
+        return view('dashboard.news')->with($data);
     } 
 
     public function testimonies(){
