@@ -3,16 +3,22 @@
 @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-md-12 bg-light" style="margin-top: 1em;">
-            <h2 style="padding-top: 1em; padding-left: 1em;">
-                News
-            </h2>
-            <p style="padding-left: 2em; padding-right: 2em; padding-bottom: 2em;">
-
-                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-
-            </p>
-        </div>
+        @foreach($news as $blog)
+            <div class="col-md-3">
+                <br>
+                   <div class="card" style="width: auto;">
+                      <img src="{{ url(isset($blog->image) ? $blog->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;border:1px solid #28a8e4;max-width: 200px;height: 120px;">
+                      <div class="card-body">
+                        <h5 class="card-title">{{@$blog->name}}</h5>
+                        <p class="card-text">
+                            {{$blog->description}}
+                        </p>
+                        <a href="{{route('home-show-news',$blog->id)}}" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">Learn More...</a>
+                      </div>
+                    </div>
+               
+            </div>
+        @endforeach
     </div>
 </div>
 @endsection

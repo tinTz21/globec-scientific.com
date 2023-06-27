@@ -14,7 +14,11 @@ class AboutController extends Controller
      */
     public function about()
     {
-        return view('about.show');
+        $about = About::first();
+        $data = [
+            'about' => $about,
+        ];
+        return view('about.show')->with($data);
     }
 
     /**

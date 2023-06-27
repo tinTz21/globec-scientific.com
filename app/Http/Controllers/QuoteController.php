@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Contact;
+use App\Models\Quote;
 use Illuminate\Http\Request;
 
-class ContactController extends Controller
+class QuoteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contact = Contact::first();
-        $data = [
-            'contact' => $contact,
-        ];
-        return view('contact.index')->with($data);
+        //
     }
 
     /**
@@ -37,22 +33,18 @@ class ContactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $id)
+    public function store(Request $request)
     {
-        $contact = Contact::updateOrCreate(
-            ['id'=>$id],
-            ['name'=>$request->name, 'description'=>$request->description]
-        );
-        return redirect()->route('contact_us');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Contact  $contact
+     * @param  \App\Models\Quote  $quote
      * @return \Illuminate\Http\Response
      */
-    public function show(Contact $contact)
+    public function show(Quote $quote)
     {
         //
     }
@@ -60,26 +52,22 @@ class ContactController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Contact  $contact
+     * @param  \App\Models\Quote  $quote
      * @return \Illuminate\Http\Response
      */
-    public function edit(Contact $contact, $id)
+    public function edit(Quote $quote)
     {
-        $contact = Contact::findOrFail($id);
-        $data = [
-            'contact'=>$contact,
-        ];
-        return view('dashboard.contact.edit_contact')->with($data);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Contact  $contact
+     * @param  \App\Models\Quote  $quote
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Contact $contact)
+    public function update(Request $request, Quote $quote)
     {
         //
     }
@@ -87,10 +75,10 @@ class ContactController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Contact  $contact
+     * @param  \App\Models\Quote  $quote
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contact $contact)
+    public function destroy(Quote $quote)
     {
         //
     }

@@ -15,8 +15,11 @@ class NewsController extends Controller
      */
     public function index()
     {
-        dd(123);
-        return view('news.index');
+        $news = News::latest()->paginate(8);
+        $data = [
+            'news' => $news,
+        ];
+        return view('news.index')->with($data);
     }
 
     public function edit_news($id){
@@ -27,6 +30,16 @@ class NewsController extends Controller
         return view('dashboard.news.edit')->with($data);
     }
 
+    public function show_news($id){
+        $news = News::findOrFail($id);
+        $blogs = News::latest()->paginate(6);
+        $data = [
+            'news'=>$news,
+            'blogs' => $blogs,
+        ];
+        return view('news.show')->with($data);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -34,7 +47,30 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.news.create');
+    }
+
+    public function store_new_news(Request $request){
+        $news = $request->validate([
+            'name'=>'required',
+            'description'=>'required',
+            'image'=>'required',
+        ]);
+
+        $file = \Request::file('image');
+        if ($file) {
+            $path = 'uploads/';
+            $filename = uniqid(date('Hmdysi')) . '_' . $file->getClientOriginalName();
+            $upload = \Request::file('image')->move($path, $filename);
+            if ($upload) {
+                $image = $path . $filename;
+            }
+        }
+
+        $news = News::create(
+            ['name'=>$request->name, 'description'=>$request->description, 'creator_id'=>Auth::user()->id,'updator_id'=>Auth::user()->id,'image'=>$image]
+        );
+        return redirect()->route('news');
     }
 
     /**
@@ -44,9 +80,20 @@ class NewsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store_news(Request $request, $id){
+
+
+        $file = \Request::file('image');
+        if ($file) {
+            $path = 'uploads/';
+            $filename = uniqid(date('Hmdysi')) . '_' . $file->getClientOriginalName();
+            $upload = \Request::file('image')->move($path, $filename);
+            if ($upload) {
+                $image = $path . $filename;
+            }
+        }
         $news = News::updateOrCreate(
             ['id'=>$id],
-            ['name'=>$request->name, 'description'=>$request->description, 'creator_id'=>Auth::user()->id,'updator_id'=>Auth::user()->id]
+            ['name'=>$request->name, 'description'=>$request->description, 'creator_id'=>Auth::user()->id,'updator_id'=>Auth::user()->id, 'image'=>$image]
         );
         return redirect()->route('news');
     }

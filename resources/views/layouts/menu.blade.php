@@ -22,6 +22,9 @@
         <a href="{{route('testimonies')}}" style="padding: 1em; text-decoration: none;" class="text-light">
             Testimonials
         </a>
+        <a href="{{route('customers')}}" style="padding: 1em; text-decoration: none;" class="text-light">
+            Customers
+        </a>
     </div>
 </div>
 @endif

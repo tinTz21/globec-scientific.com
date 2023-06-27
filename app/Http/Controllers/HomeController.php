@@ -70,12 +70,27 @@ class HomeController extends Controller
     public function store_product(Request $request){
         $request->validate([
             'name' => 'required',
-            'description'=>'required'
+            'description'=>'required',
+            'image'=>'required'
         ]);
+
+        $file = \Request::file('image');
+        if ($file) {
+            $path = 'uploads/';
+            $filename = uniqid(date('Hmdysi')) . '_' . $file->getClientOriginalName();
+            $upload = \Request::file('image')->move($path, $filename);
+            if ($upload) {
+                $image = $path . $filename;
+            }
+        }
+
         $product = Product::updateOrCreate(
             ['id'=>$request->id],
-            ['name'=>$request->name,'description'=>$request->description,'translator_id'=>Auth::user()->id, 'updator_id'=>Auth::user()->id]
+            ['name'=>$request->name,'description'=>$request->description,'translator_id'=>Auth::user()->id, 'updator_id'=>Auth::user()->id, 'image'=>$image]
         );
+
+
+
         return redirect()->route('products');
     }
 

@@ -4,18 +4,18 @@
         <div class="row">
             <div class="col-md-6" style="padding: 3em;">
                 <h1 style="color: #017C7A;">
-                    Hello! Welcome into my world
+                    {{@$about->name}}
                 </h1>
                 <p>
-                    I am Charles Magome, a Biomedical Engineer and technology enthusiast with a passion for using my skills and knowledge to make a positive impact on the world.
-                    <br>
-                    I am Charles Magome, a Biomedical Engineer and technology enthusiast with a passion for using my skills and knowledge to make a positive impact on the world. 
+                    {{@$about->description}}
                 </p>
 
-                <a href="#" class="btn btn-outline-light rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
-                    About Globec
+                <a href="{{route('home-about')}}" class="btn btn-outline-light rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
+                    Read more...
                 </a>
             </div>
+
+
             <div class="col-md-6" style="padding: 2em">
 
                 <div id="carouselExampleCaptions" class="carousel slide">
@@ -58,6 +58,11 @@
                 </div>
                 
             </div>
+
+
+
+
+
         </div>
     </div>
 
@@ -71,101 +76,37 @@
                 </h1>
                 &nbsp;
             </div>
-        
-            <div class="col-md-6">
-                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
-                  <div class="row g-0">
-                    <div class="col-md-6 ">
-                      <img src="images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card-body">
-                        <h5 class="card-title" style="color: #017C7A;">Hospital Bed</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.little bit longer.littl
-                        </p>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row g-0" style="padding: 1em">
-                       <a class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
-                            <i class="bi-cart"></i> Place Order
-                        </a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-md-6">
-                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
-                  <div class="row g-0">
-                    <div class="col-md-6">
-                      <img src="images/meter.jpg" width="100%" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card-body">
-                        <h5 class="card-title" style="color: #017C7A;">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.little bit longer.littl</p>
-                        
+            @foreach($products as $product)
+                <div class="col-md-6">
+                    <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-6 ">
+                          <img src="images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-6">
+                          <div class="card-body">
+                            <h5 class="card-title" style="color: #017C7A;">
+                                {{$product->name}}
+                            </h5>
+                            <p class="card-text">
+                                {{$product->description}}
+                            </p>
+                            
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="row g-0" style="padding: 1em">
-                        <a class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
-                            <i class="bi-cart"></i> Place Order
-                        </a>
+                      <div class="row g-0" style="padding: 1em">
+                           <a href="{{route('product_quote',$product->id)}}" class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
+                                <i class="bi-cart"></i> Place Order
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
 
-            <div class="col-md-6">
-                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
-                  <div class="row g-0">
-                    <div class="col-md-6">
-                      <img src="images/tube.jpeg" width="100%" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card-body">
-                        <h5 class="card-title" style="color: #017C7A;">Card title</h5>
-                        
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                            This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                        </p>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row g-0" style="padding: 1em">
-                        <a class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
-                            <i class="bi-cart"></i> Place Order
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
-                  <div class="row g-0">
-                    <div class="col-md-6">
-                      <img src="images/ultrasound.jpeg" width="100%" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card-body">
-                        <h5 class="card-title" style="color: #017C7A;">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                        </p>
-                        
-                      </div>
-                    </div>
-                    <div class="row g-0" style="padding: 1em">
-                        <a class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
-                            <i class="bi-cart"></i> Place Order
-                        </a>
-                    </div>
-                  </div>
-                </div>
+            <div class="col-md-12">
+                {{-- @$product->links() --}}
             </div>
 
         </div>
@@ -195,10 +136,10 @@
                  <hr>
                 <div>
                     <h3 class="d-flex justify-content-center">
-                        Products 
+                        {{\App\Models\Product::first()->name}}
                     </h3>
 
-                    <i class="bi-arrow-right-circle text-light d-flex justify-content-center" style="font-size: 2rem;"></i>
+                    <a class="bi-arrow-right-circle text-light d-flex justify-content-center" style="font-size: 2rem; text-decoration: none;" href="{{route('product_quote', \App\Models\Product::first()->id)}}"></a>
                 </div>
             </div>
 
@@ -207,10 +148,10 @@
                  <hr>
                 <div>
                     <h3 class="d-flex justify-content-center">
-                        Medtech training 
+                        {{\App\Models\News::first()->name}}
                     </h3>
 
-                    <i class="bi-arrow-right-circle text-light text-primary d-flex justify-content-center" style="font-size: 2rem;"></i>
+                    <a class="bi-arrow-right-circle text-light text-primary d-flex justify-content-center" style="font-size: 2rem; text-decoration: none;" href="{{route('home-show-news',\App\Models\News::first()->id)}}"></a>
                 </div>
             </div>
 
@@ -222,7 +163,7 @@
                         Contact Us 
                     </h3>
 
-                    <i class="bi-arrow-right-circle text-light text-primary d-flex justify-content-center" style="font-size: 2rem;"></i>
+                    <a class="bi-arrow-right-circle text-light text-primary d-flex justify-content-center" style="font-size: 2rem; text-decoration: none;" href="{{route('home-contact')}}"></a>
                 </div>
             </div>
         </div>
@@ -237,59 +178,23 @@
             </h1>
         </div>
         <div class="row d-flex justify-content-center" style="padding-top: 1em;">
-           <div class="col-md-3" style="margin-top: 1em">
-               <div class="card" style="width: auto;">
-                  <img src="images/cancer.jpg    " class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Multianalyte liquid biopsy</h5>
-                    <p class="card-text">
-                        Join our three part webinar series to learn how to isolate multianalytes from blood samples. And how to analyze cfDNA using NGS and dPCR. Sign up for May 9–23. Sign up for May 9–23. Sign up for May 9–23. 
-                    </p>
-                    <a href="#" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">Learn More...</a>
-                  </div>
-                </div>
-           </div>
-
-           <div class="col-md-3" style="margin-top: 1em">
-               <div class="card" style="width: auto;">
-                  <img src="images/about.jpg    " class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">World Cancer Day highlights value of research</h5>
-                    <p class="card-text">
-                        Why is cancer research important to you? Would Cancer Day is a great time to reflect on the value of cancer research. o analyze cfDNA using NGS and dPCR. Sign up for May 9–23.
-                    </p>
-                    <a href="#" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">Learn More...</a>
-                  </div>
-                </div>
-           </div>
-
-           <div class="col-md-3" style="margin-top: 1em">
-               <div class="card" style="width: auto;">
-                  <img src="images/talk.png" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Sensitive mutation analysis of cfDNA by dPCR Q&As</h5>
-                    <p class="card-text">
-                        Our panel of experts answer your questions and share their tips for sensitive mutation analysis of cfDNA by digital PCR. Enjoy the discussion about cfDNA sample processing 
-                    </p>
-                    <a href="#" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">Learn More...</a>
-                  </div>
-                </div>
-           </div>
-
-           <div class="col-md-3" style="margin-top: 1em">
-               <div class="card" style="width: auto;">
-                  <img src="images/computer.jpg    " class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Cell-free DNA from liquid biopsies</h5>
-                    <p class="card-text">
-                        From biomarker research to personalized medicine, cell-free DNA isolated from liquid biopsies provides a powerful method to monitor cancer development in future. Enjoy three
-                    </p>
-                    <a href="#" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">Learn More...</a>
-                  </div>
-                </div>
-           </div>
-
-
+            @foreach($news as $blog)
+                <div class="col-md-3" style="margin-top: 1em">
+                   <div class="card" style="width: auto;">
+                      <img src="images/cancer.jpg    " class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">{{@$blog->name}}</h5>
+                        <p class="card-text">
+                            {{$blog->description}}
+                        </p>
+                        <a href="{{route('home-show-news',$blog->id)}}" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">Learn More...</a>
+                      </div>
+                    </div>
+               </div>
+            @endforeach
+            <div>
+                {{-- $news->links() --}}
+            </div>
         </div>
     </div>
 
@@ -301,7 +206,7 @@
                 </h1>
                 <hr class="text-light">
                 <h3 class="d-flex justify-content-center text-light">
-                    What Client Says About Us
+                    What Client Says About Globec S Ltd
                 </h3>
 
             </div>
@@ -322,7 +227,7 @@
 
                   <div class="card-body">
                     <h4 class="d-flex justify-content-center" style="color: #017C7A;">
-                        Debora Augustino
+                        Iren C Somebody
                     </h4>
                     <p class="d-flex justify-content-center" style="color: #017C7A;">
                         <i class="bi-dot"></i>Marketing Manager
@@ -344,7 +249,7 @@
 
                   <div class="card-body">
                     <h4 class="d-flex justify-content-center" style="color: #017C7A;">
-                        Debora Augustino
+                        Customer Debora
                     </h4>
                     <p class="d-flex justify-content-center" style="color: #017C7A;">
                         <i class="bi-dot"></i>Marketing Manager
@@ -366,7 +271,7 @@
 
                   <div class="card-body">
                     <h4 class="d-flex justify-content-center" style="color: #017C7A;">
-                        Debora Augustino
+                         Augustino Emanuel
                     </h4>
                     <p class="d-flex justify-content-center" style="color: #017C7A;">
                         <i class="bi-dot"></i>Marketing Manager

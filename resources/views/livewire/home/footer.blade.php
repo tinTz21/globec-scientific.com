@@ -52,30 +52,36 @@
                         <h3 class="d-flex justify-content-center" style="color: #017C7A;">
                             Update & News
                         </h3>
+                        @foreach($news as $blog)
+                            <a href="{{route('home-show-news', $blog->id)}}" class="d-flex justify-content-left" style="text-decoration: none; padding-left: 1em; color: #33BAFA;">
+                                <i class="bi-dot"></i> 
+                                {{@$blog->name}}
+                            </a>
+                        @endforeach
                         
-                        <a href="#" class="d-flex justify-content-left" style="text-decoration: none; padding-left: 1em; color: #33BAFA;">
-                            <i class="bi-dot"></i> Multianalyte liquid biopsy
-                        </a>
-                        <a href="#" class="d-flex justify-content-left" style="text-decoration: none; padding-left: 1em; color: #33BAFA;">
-                            <i class="bi-dot"></i> World Cancer Day highlights value of research
-                        </a>
-                        <a href="#" class="d-flex justify-content-left" style="text-decoration: none; padding-left: 1em; color: #33BAFA;">
-                            <i class="bi-dot"></i> Sensitive mutation analysis of cfDNA by dPCR Q&As
-                        </a>
-                        <a href="#" class="d-flex justify-content-left" style="text-decoration: none; padding-left: 1em; color: #33BAFA;">
-                            <i class="bi-dot"></i> Cell-free DNA from liquid biopsies
-                        </a>
-                        <a href="#" class="d-flex justify-content-left" style="text-decoration: none; padding-left: 1em; color: #33BAFA;">
-                            <i class="bi-dot"></i> Multianalyte liquid biopsy
-                        </a>
+                        <div class="col-md-12">
+                            {{$news->links()}}
+                        </div>
                        
                         
                     </div>
 
-                    <div class="col-md-3 d-flex justify-content-center" style="margin-top: 1em">
-                        <h3 style="color: #017C7A;">
+                    <div class="col-md-3">
+                        <h3 class="d-flex justify-content-center" style="color: #017C7A;">
                             Latest Products
                         </h3>
+                       @foreach($products as $product)
+                            <a href="{{route('product_quote',$product->id)}}" class="d-flex justify-content-left" style="text-decoration: none; padding-left: 1em; color: #33BAFA;">
+                                <i class="bi-dot"></i> 
+                                {{@$product->name}}
+                            </a>
+                        @endforeach
+                        
+                        <div class="col-md-12">
+                            {{$news->links()}}
+                        </div>
+                       
+                        
                     </div>
                 </div>
             </div>

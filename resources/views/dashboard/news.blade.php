@@ -6,17 +6,25 @@
         <div class="col-md-12">
 
             <div class="container-fluid bg-light" style="padding: 2em; margin-top: 1em;">
-            <div class="container-fluid">
-                <h3 style="color: #017C7A;">
-                    News
-                </h3>
+            <div class="row">
+                <div class="col-md-9">
+                    <h3 style="color: #017C7A;">
+                        News
+                    </h3>
+                </div>
+                <div class="col-md-3">
+                    
+                    <a href="{{route('add-news')}}" class="btn btn-outline-secondary rounded-pill">
+                       <i class="bi-plus-circle"></i> Add New
+                    </a>
+                </div>
             </div>
             
             <div class="row d-flex justify-content-center" style="padding-top: 1em;">
                @foreach($news as $blog)
                <div class="col-md-4" style="margin-top: 1em">
                    <div class="card" style="width: auto;">
-                      <img src="/images/cancer.jpg    " class="card-img-top" alt="...">
+                      <img src="{{ url(isset($blog->image) ? $blog->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;border:1px solid #28a8e4;max-width: 300px;">
                       <div class="card-body">
                         <h5 class="card-title">
                             {{$blog->name}}

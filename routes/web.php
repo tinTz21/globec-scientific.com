@@ -70,7 +70,7 @@ Route::post('/dashboard/contact-us/store/{id}', [ContactController::class, 'stor
 // News Controllers
 Route::get('/dashboard/news', [HomeController::class, 'news'])->name('news')->middleware('auth');
 
-Route::get('/news', [NewsController::class, 'index'])->name('home-news')->middleware('auth');
+Route::get('/news', [NewsController::class, 'index'])->name('home-news');
 
 Route::get('/dashboard/news/{id}', [NewsController::class, 'edit_news'])->name('edit-news')->middleware('auth');
 
@@ -80,4 +80,22 @@ Route::get('/dashboard/news/delete/{id}', [NewsController::class, 'show'])->name
 
 Route::post('/dashboard/news/destroy/{id}', [NewsController::class, 'destroy'])->name('destroy-news')->middleware('auth');
 
-Route::get('/dashboard/news/more/{id}', [NewsController::class, 'more'])->name('more-news')->middleware('auth');
+Route::get('/dashboard/news/more/{id}', [NewsController::class, 'more'])->name('more-news')->middleware('auth'); 
+
+Route::get('/dashboard/news-create', [NewsController::class, 'create'])->name('add-news')->middleware('auth');
+
+Route::post('/dashboard/store/', [NewsController::class, 'store_new_news'])->name('store-new-news')->middleware('auth');
+
+Route::get('/news/show/{id}', [NewsController::class, 'show_news'])->name('home-show-news');
+
+// Product and Solution quote
+Route::get('/product/quote/{id}', [ProductController::class, 'product_quote'])->name('product_quote');
+
+Route::post('/product/quote/thank-you/{id}', [ProductController::class, 'submit_quote'])->name('query-submit'); 
+
+// Customer
+Route::get('/customers', [ProductController::class, 'customer_list'])->name('customers');
+
+Route::get('/customers/show/{id}', [ProductController::class, 'show'])->name('show-customers')->middleware('auth');
+
+Route::get('/customers/sorted/{id}', [ProductController::class, 'sorted'])->name('customer-sorted')->middleware('auth');
