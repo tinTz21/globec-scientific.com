@@ -2,13 +2,19 @@
 
 @section('content')
 <div class="container-fluid">
+
+
+
     <div class="row justify-content-center">
         <div class="col-md-8 bg-light" style="margin-top: 1em;">
+            <h3 style=" padding: 10px;">
+                News
+            </h3>
             <div class="col-md-12">
-                <div class="row" style="margin-top: 1em">
+                <div class="row" style="margin-top: 1em; padding-left: 1.4em;">
                    <div class="card" style="width: auto;">
-                    <h3 class="card-title d-flex justify-content-center" style="padding-top: 1em">{{@$news->name}}</h3>
-                      <img src="{{ url(isset($news->image) ? $news->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;border:1px solid #28a8e4;max-width: 200px;height: 120px;">
+                    <h3 class="card-title" style="padding-top: 1em">{{@$news->name}}</h3>
+                      <img src="{{ url(isset($news->image) ? $news->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 40em;height: auto;" class="d-flex justify-content-center">
                       <div class="card-body">
                         
                         <p class="card-text">

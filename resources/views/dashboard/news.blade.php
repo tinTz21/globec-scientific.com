@@ -21,10 +21,40 @@
             </div>
             
             <div class="row d-flex justify-content-center" style="padding-top: 1em;">
-               @foreach($news as $blog)
+
+                <div class="table-responsive col-md-12">
+                <table class="table" id="cvs" style="width:100%">
+                <thead >
+                <tr class="text-secondary">
+                <th  style=" color: #707070 !important; "> No. </th>
+                <th  style=" color: #707070 !important; "> News </th>
+                <th  style=" color: #707070 !important; "> Description </th>
+                <th  style=" color: #707070 !important; "> Created At </th>
+                <th  style=" color: #707070 !important;"> View </th>
+                </tr>
+                </thead>
+                <tbody>
+                    @foreach($news as $blog)
+                        <tr>
+                          <td data-label="Level" style=" color: #707070 !important; "> {{@$blog->iteration}} </td>
+                          <td data-label="Level" style=" color: #707070 !important; "> {{@$blog->name}} </td>
+                          <td data-label="Level" style=" color: #707070 !important; "> {{@$blog->description}} </td>
+                          <td data-label="Level" style="width: 8em; color: #707070 !important; "> {{@$blog->created_at->format('d-m, Y')}} </td>
+                          <td data-label="Level" style=" color: #707070 !important; "> 
+                            <a href="{{route('more-news',$blog->id)}}">
+                                <i class="bi-eye" style="font-size: 2em; color: #017C7A;"></i>
+                            </a>
+                          </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+                </table>
+            </div>
+
+               {{-- @foreach($news as $blog)
                <div class="col-md-4" style="margin-top: 1em">
                    <div class="card" style="width: auto;">
-                      <img src="{{ url(isset($blog->image) ? $blog->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;border:1px solid #28a8e4;max-width: 300px;">
+                      <img src="{{ url(isset($blog->image) ? $blog->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 300px;">
                       <div class="card-body">
                         <h5 class="card-title">
                             {{$blog->name}}
@@ -43,7 +73,7 @@
                       </div>
                     </div>
                </div>
-               @endforeach
+               @endforeach --}}
             </div>
         </div>
 

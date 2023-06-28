@@ -6,12 +6,14 @@
         <div class="col-md-6 bg-light" style="margin-top: 1em;">
             <div class="col-md-12">
                     <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
-                      <div class="container-fluid" style="padding-top: 2em;">
-                        <h3 class="card-title d-flex justify-content-center" style="color: #017C7A;">
+                      <div class="container-fluid" style="padding-top: 1em;">
+                        <h3 class="card-title " style="color: #017C7A;">
                                 {{$product->name}}
-                            </h3>
-                        <div class="col-md-12 d-flex justify-content-center">
-                          <img src="/images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="...">
+                        </h3>
+                        <div class="col-md-12">
+
+                            <img src="{{ url(isset($product->image) ? $product->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 32em; margin-top: 1.3em;"> 
+                          <!-- <img src="/images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="..."> -->
                         </div>
                         <div class="col-md-12">
                           <div class="card-body">

@@ -56,6 +56,14 @@ class ProductController extends Controller
         return view('product.thanks_quote')->with($data);
     }
 
+    public function show_product($id){
+        $product = Product::findOrFail($id);
+        $data = [
+            'product' => $product,
+        ];
+        return view('dashboard.product.show')->with($data);
+    }
+
     /**
      * Display the specified resource.
      *

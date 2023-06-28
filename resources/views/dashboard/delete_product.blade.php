@@ -32,7 +32,7 @@
                         <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
                           <div class="row g-0">
                             <div class="col-md-6 ">
-                              <img src="/images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="...">
+                              <img src="{{ url(isset($product->image) ? $product->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 16em; max-height: auto; margin-top: 1.3em;"> 
                             </div>
                             <div class="col-md-6">
                               <div class="card-body">

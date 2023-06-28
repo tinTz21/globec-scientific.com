@@ -70,7 +70,7 @@ class NewsController extends Controller
         $news = News::create(
             ['name'=>$request->name, 'description'=>$request->description, 'creator_id'=>Auth::user()->id,'updator_id'=>Auth::user()->id,'image'=>$image]
         );
-        return redirect()->route('news');
+        return redirect()->route('more-news',$news->id);
     }
 
     /**
@@ -95,7 +95,7 @@ class NewsController extends Controller
             ['id'=>$id],
             ['name'=>$request->name, 'description'=>$request->description, 'creator_id'=>Auth::user()->id,'updator_id'=>Auth::user()->id, 'image'=>$image]
         );
-        return redirect()->route('news');
+        return redirect()->route('more-news',$news->id);
     }
 
     /**

@@ -6,7 +6,8 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProductController; 
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\NewsController;
+use App\Http\Controllers\NewsController; 
+use App\Http\Controllers\AboutImageController;
  
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,16 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth'); 
 
 Route::get('/dashboard/about', [HomeController::class, 'about'])->name('about')->middleware('auth');
+
+Route::get('/dashboard/about/images', [AboutImageController::class, 'index'])->name('about-images')->middleware('auth'); 
+
+Route::get('/dashboard/about/images/new', [AboutImageController::class, 'create'])->name('add_about_image')->middleware('auth');
+
+Route::post('/dashboard/about/images/store', [AboutImageController::class, 'store'])->name('store_about_image')->middleware('auth'); 
+
+Route::get('/dashboard/about/images/delete/{id}', [AboutImageController::class, 'delete'])->name('delete-about-image')->middleware('auth');
+
+Route::post('/dashboard/about/images/destroy/{id}', [AboutImageController::class, 'destroy'])->name('destroy-about-image')->middleware('auth'); 
 
 Route::get('/dashboard/about/edit/{id}', [HomeController::class, 'edit_about'])->name('edit-about')->middleware('auth');
 
@@ -92,6 +103,8 @@ Route::get('/news/show/{id}', [NewsController::class, 'show_news'])->name('home-
 Route::get('/product/quote/{id}', [ProductController::class, 'product_quote'])->name('product_quote');
 
 Route::post('/product/quote/thank-you/{id}', [ProductController::class, 'submit_quote'])->name('query-submit'); 
+
+Route::get('/product/show/{id}', [ProductController::class, 'show_product'])->name('show-product')->middleware('auth'); 
 
 // Customer
 Route::get('/customers', [ProductController::class, 'customer_list'])->name('customers');

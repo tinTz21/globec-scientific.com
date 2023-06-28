@@ -7,7 +7,9 @@ use App\Models\About;
 use App\Models\Product;
 use App\Models\Contact;
 use App\Models\News;
+use App\Models\Quote;
 use Auth;
+use App\Models\AboutImage;
 
 class HomeController extends Controller
 {
@@ -28,13 +30,23 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $products = Product::latest()->paginate(3);
+        $customers = Quote::latest()->paginate(3);
+        $news = News::latest()->paginate(3);
+        $data = [
+            'products'=>$products,
+            'customers'=>$customers,
+            'news'=>$news,
+        ];
+        return view('home')->with($data);
     }
 
     public function about(){
         $about = About::first();
+        $about_images = AboutImage::latest()->paginate(4);
         $data = [
             'about'=>$about,
+            'about_images' => $about_images,
         ];
         return view('dashboard.about')->with($data);
     } 

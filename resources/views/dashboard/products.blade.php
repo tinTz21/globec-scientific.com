@@ -19,45 +19,35 @@
                 </div>  
             </div>
 
-            @foreach($products as $product)
-                <div class="col-md-6">
-                    <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
-                      <div class="row g-0">
-                        <div class="col-md-6 ">
-                          <!-- <img src="/images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="..."> -->
-                          <img
-                                        src="{{ url(isset($product->image) ? $product->image : 'images/nopic.jpg') }}"
-                                        alt="image"
-                                        style="border-radius: 2px;border:1px solid #28a8e4;max-width: 200px;height: 120px;">
-                               
-                        </div>
-                        <div class="col-md-6">
-                          <div class="card-body">
-                            <h5 class="card-title" style="color: #017C7A;">
-                                {{$product->name}}
-                            </h5>
-                            <p class="card-text">
-                                {{$product->description}}
-                            </p>
-                            
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row g-0" style="padding: 1em">
-                           <div class="col-md-6">
-                               <a class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;" href="{{route('edit-product',$product->id)}}">
-                                <i class="bi-cart"></i> Edit
+            <div class="table-responsive col-md-12">
+                <table class="table" id="cvs" style="width:100%">
+                <thead >
+                <tr class="text-secondary">
+                <th  style=" color: #707070 !important; "> No. </th>
+                <th  style=" color: #707070 !important; "> Product </th>
+                <th  style=" color: #707070 !important; "> Description </th>
+                <th  style=" color: #707070 !important; "> Created At </th>
+                <th  style=" color: #707070 !important;"> View </th>
+                </tr>
+                </thead>
+                <tbody>
+                    @foreach($products as $product)
+                        <tr>
+                          <td data-label="Level" style=" color: #707070 !important; "> {{@$product->iteration}} </td>
+                          <td data-label="Level" style=" color: #707070 !important; "> {{@$product->name}} </td>
+                          <td data-label="Level" style=" color: #707070 !important; "> {{@$product->description}} </td>
+                          <td data-label="Level" style=" color: #707070 !important; "> {{@$product->created_at->format('d-m, Y')}} </td>
+                          <td data-label="Level" style=" color: #707070 !important; "> 
+                            <a href="{{route('show-product',$product->id)}}">
+                                <i class="bi-eye" style="font-size: 2em; color: #017C7A;"></i>
                             </a>
-                           </div>
-                           <div class="col-md-6">
-                               <a class="form-control text-danger btn btn-outline-tranparent rounded-pill" style="padding: 0.5em; border-color: red; color: #33BAFA;" href="{{route('delete_product',$product->id)}}">
-                                    <i class="bi-trash text-danger"></i> Delete
-                                </a>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
+                          </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+                </table>
+            </div>
+            
         </div>
     </div>
 </div>

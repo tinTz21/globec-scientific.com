@@ -6,15 +6,16 @@
         <div class="col-md-6 bg-light" style="margin-top: 1em;">
             <div class="col-md-12">
                     <div class="card mb-3 border-0 bg-light" style="max-width: 540px;">
-                      <div class="">
+                      <div class="container-fluid" style="padding-top: 1em;">
+                        <h3 class="card-title " style="color: #017C7A;">
+                                {{$product->name}}
+                        </h3>
                         <div class="col-md-12 ">
                           <img src="/images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-md-12">
                           <div class="card-body">
-                            <h5 class="card-title" style="color: #017C7A;">
-                                {{$product->name}}
-                            </h5>
+                            
                             <p class="card-text">
                                 {{$product->description}}
                             </p>

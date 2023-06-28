@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-auth')
 
 @section('content')
 <div class="container">
@@ -8,6 +8,10 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
+                    Fpr registration please ask admin: <br>
+                    Name: Augustino Emanuel<br>
+                    Phone: +255 758 477 593;
+                    {{-- 
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -69,6 +73,7 @@
                             </div>
                         </div>
                     </form>
+                    --}}
                 </div>
             </div>
         </div>

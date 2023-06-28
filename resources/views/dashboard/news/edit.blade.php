@@ -20,7 +20,7 @@
             </p>
             <input type="file" class="form-control" name="image">
             <br>
-            <a href="{{route('news')}}" class="btn btn-outline-secondary rounded-pill">
+            <a href="{{route('more-news',@$news->id)}}" class="btn btn-outline-secondary rounded-pill">
                 Back
             </a>
             <button class="btn btn-outline-secondary rounded-pill" type="submit">

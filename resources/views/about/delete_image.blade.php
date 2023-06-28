@@ -11,16 +11,16 @@
 
                <div class="col-md-6">
                    <h3 class="d-flex justify-content-center">
-                       Are you sure you want to delete this news?
+                       Are you sure you want to delete this image?
                    </h3>
                    <div class="row" style="padding: 2em">
                        <div class="col-md-6">
-                           <a href="{{route('news')}}" class="form-control btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">
+                           <a href="{{route('about-images')}}" class="form-control btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">
                                Back
                            </a>
                        </div>
                        <div class="col-md-6">
-                        <form method="POST" action="{{route('destroy-news', @$news->id)}}">
+                        <form method="POST" action="{{route('destroy-about-image', @$image->id)}}">
                             @csrf
                             <button type="submit"  class="form-control btn btn-outline-secondary text-danger rounded-pill" style="border-color: red; color: red;">
                             <i class="bi-trash"></i> 
@@ -33,14 +33,11 @@
 
                <div class="col-md-6" style="margin-top: 1em">
                    <div class="card" style="width: auto;">
-                      <img src="{{ url(isset($news->image) ? $news->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 50em; max-height: auto; margin-top: 1.3em;"> 
+                      <img src="{{ url(isset($image->name) ? $image->name : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 50em; max-height: auto; margin-top: 1.3em;"> 
                       <div class="card-body">
                         <h5 class="card-title">
-                            {{$news->name}}
-                        </h5>
-                        <p class="card-text">
-                            {{$news->description}} 
-                        </p>
+                            Sliding image
+                        </h5>   
                       </div>
                     </div>
                </div>

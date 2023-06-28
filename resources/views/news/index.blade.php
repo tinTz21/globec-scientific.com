@@ -1,13 +1,16 @@
 @extends('layouts.home')
 
 @section('content')
-<div class="container-fluid">
-    <div class="row justify-content-center">
+<div class="container-fluid bg-light" style="margin-top: 1em; color: #017C7A;">
+    <h3 style=" padding: 10px;">
+        News
+    </h3>
+    <div class="row">
         @foreach($news as $blog)
             <div class="col-md-3">
                 <br>
                    <div class="card" style="width: auto;">
-                      <img src="{{ url(isset($blog->image) ? $blog->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;border:1px solid #28a8e4;max-width: 200px;height: 120px;">
+                      <img src="{{ url(isset($blog->image) ? $blog->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 30em;height: auto;">
                       <div class="card-body">
                         <h5 class="card-title">{{@$blog->name}}</h5>
                         <p class="card-text">
