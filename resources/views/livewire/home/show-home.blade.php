@@ -18,18 +18,50 @@
 
             <div class="col-md-6" style="padding: 2em">
 
-                <div id="carouselExampleCaptions" class="carousel slide">
+                {{-- <div id="carouselExampleCaptions" class="carousel slide"> --}}
 
 
 
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner ">
+                            @foreach($sliders as $slider)
+                                <div class="carousel-item @if($loop->first) active @endif">
+                                    <div class="slider-image text-center">
+                                        <img src="{{  asset('images/'.$slider->image) }}" class="d-inline-block border text-center rounded" alt="{{ $slider->image }}">
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    {{-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                       <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                       </ol>
                       <div class="carousel-inner">
-
                         @foreach($about_images as $image)
                             <div class="carousel-item active">
                               <img class="d-block w-100" src="{{ url(isset($image->name) ? $image->name : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 38em; max-height: auto; margin-top: 1.3em;"> 
@@ -38,8 +70,6 @@
                               </div>
                             </div>
                           @endforeach
-
-
                       </div>
                       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -49,9 +79,11 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                       </a>
-                    </div>
-                    </div>
+                    </div> </div> --}}
 
+
+
+                    
             </div>
         </div>
     </div>
