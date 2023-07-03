@@ -18,17 +18,12 @@
 
             <div class="col-md-6" style="padding: 2em">
 
-                {{-- <div id="carouselExampleCaptions" class="carousel slide"> --}}
-
-
-
-
-                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner ">
-                            @foreach($sliders as $slider)
+                            @foreach($about_images as $image)
                                 <div class="carousel-item @if($loop->first) active @endif">
                                     <div class="slider-image text-center">
-                                        <img src="{{  asset('images/'.$slider->image) }}" class="d-inline-block border text-center rounded" alt="{{ $slider->image }}">
+                                        <img src="{{ url(isset($image->name) ? $image->name : 'images/nopic.jpg') }}" class="d-block w-100" alt="Globec Scientific Ltd">
                                     </div>
                                 </div>
                             @endforeach
@@ -43,47 +38,6 @@
                         </button>
                     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-                    {{-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                      <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                      </ol>
-                      <div class="carousel-inner">
-                        @foreach($about_images as $image)
-                            <div class="carousel-item active">
-                              <img class="d-block w-100" src="{{ url(isset($image->name) ? $image->name : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 38em; max-height: auto; margin-top: 1.3em;"> 
-                              <div class="carousel-caption d-none d-md-block">
-                                <h5 class="text-dark">Globec Scientific Limited</h5>
-                              </div>
-                            </div>
-                          @endforeach
-                      </div>
-                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </div> </div> --}}
-
-
-
-                    
             </div>
         </div>
     </div>
