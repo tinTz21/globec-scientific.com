@@ -36,7 +36,7 @@
                 <tbody>
                     @foreach($news as $blog)
                         <tr>
-                          <td data-label="Level" style=" color: #707070 !important; "> {{@$blog->iteration}} </td>
+                          <td data-label="Level" style=" color: #707070 !important; "> {{@$loop->iteration}} </td>
                           <td data-label="Level" style=" color: #707070 !important; "> {{@$blog->name}} </td>
                           <td data-label="Level" style=" color: #707070 !important; "> {{@$blog->description}} </td>
                           <td data-label="Level" style="width: 8em; color: #707070 !important; "> {{@$blog->created_at->format('d-m, Y')}} </td>

@@ -21,10 +21,15 @@
         </a><br>
         <a href="{{route('testimonies')}}" style="padding: 1em; text-decoration: none;" class="text-light">
             Testimonials
-        </a>
+        </a><br>
         <a href="{{route('customers')}}" style="padding: 1em; text-decoration: none;" class="text-light">
             Customers
+        </a><br>
+        @if(Auth::user()->type == 'Admin')
+        <a href="{{route('staffs')}}" style="padding: 1em; text-decoration: none;" class="text-light">
+            Manage Staff(s)
         </a>
+        @endif
     </div>
 </div>
 @endif

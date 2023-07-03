@@ -13,6 +13,7 @@
                 <table class="table" id="cvs" style="width:100%">
                 <thead >
                 <tr class="text-secondary">
+                <th  style=" color: #707070 !important; "> No. </th>
                 <th  style=" color: #707070 !important; "> Name </th>
                 <th  style=" color: #707070 !important; "> Institution </th>
                 <th  style=" color: #707070 !important; "> Product Name </th>
@@ -24,7 +25,7 @@
                 <tbody>
                     @foreach($customers as $customer)
                         <tr>
-                          
+                          <td data-label="Level" style=" color: #707070 !important; "> {{@$loop->iteration}} </td>
                           <td data-label="Level" style=" color: #707070 !important; "> {{@$customer->name}} </td>
                           <td data-label="Level" style=" color: #707070 !important; "> {{@$customer->institution}} </td>
                           <td data-label="Level" style="color: {{isset($customer->product->name) ? 'green' : 'red'}};">

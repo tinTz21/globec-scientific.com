@@ -8,8 +8,10 @@ use App\Models\Product;
 use App\Models\Contact;
 use App\Models\News;
 use App\Models\Quote;
+use App\Models\User;
 use Auth;
 use App\Models\AboutImage;
+use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
@@ -39,6 +41,65 @@ class HomeController extends Controller
             'news'=>$news,
         ];
         return view('home')->with($data);
+    }
+
+    public function staffs(){
+        $users = User::where('type','!=','Admin')->latest()->get();
+        $data = [
+            'users' => $users,
+        ];
+        return view('dashboard.staff.index')->with($data);
+    }
+
+    public function register(){
+
+        return view('dashboard.auth.register');
+    }
+
+    public function register_staff(Request $request){
+
+        $staff = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'type' => ['required', 'string', 'max:25'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:6', 'confirmed'],
+        ]);
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'type' => $request->type,
+            'password' => Hash::make($request->password),
+        ]);
+
+        return redirect()->route('staffs');
+    }
+
+    public function store_edited_user(Request $request, $id){
+        $staff = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'type' => ['required', 'string', 'max:25'],
+            'password' => ['required', 'string', 'min:6', 'confirmed'],
+        ]);
+
+        $user = User::updateOrCreate(
+            ['id'=>$id],
+            [
+            'name' => $request->name,
+            'type' => $request->type,
+            'password' => Hash::make($request->password),
+            ]
+        );
+
+        return redirect()->route('staffs');
+    }
+
+    public function edit_staff($id){
+        $user = User::findOrFail($id);
+        $data = [
+            'user' => $user,
+        ];
+        return view('dashboard.auth.edit_user')->with($data);
     }
 
     public function about(){

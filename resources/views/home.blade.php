@@ -70,9 +70,9 @@
                                 <div class="card-body">
                                     @foreach($news as $blog)
                                         <div class="col-md-12">
-                                            {{$blog->name}} &nbsp; 
+                                           
                                             <a href="{{route('more-news',$blog->id)}}" style="text-decoration: none;">
-                                                <i class="bi-eye" style="font-size: 1em;"></i>
+                                                 {{$blog->name}} &nbsp; <i class="bi-eye" style="font-size: 1em;"></i>
                                             </a>
                                         </div>
                                     @endforeach

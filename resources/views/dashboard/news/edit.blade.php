@@ -18,7 +18,7 @@
                     {{@$news->description}}
                 </textarea>
             </p>
-            <input type="file" class="form-control" name="image">
+            <input type="file" class="form-control" name="image" required>
             <br>
             <a href="{{route('more-news',@$news->id)}}" class="btn btn-outline-secondary rounded-pill">
                 Back

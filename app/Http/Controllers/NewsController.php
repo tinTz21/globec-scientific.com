@@ -81,6 +81,9 @@ class NewsController extends Controller
      */
     public function store_news(Request $request, $id){
 
+        $news = $request->validate([
+            'image'=>'required',
+        ]);
 
         $file = \Request::file('image');
         if ($file) {

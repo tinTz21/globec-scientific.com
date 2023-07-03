@@ -26,9 +26,20 @@ Route::get('/', function () {
 
 // Route::get('master', ShowPosts::class);
 
+
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth'); 
+Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
+
+Route::post('/dashboard/register/new_staff', [HomeController::class, 'register_staff'])->name('register_staff')->middleware('auth');
+
+Route::get('/dashboard/staffs', [HomeController::class, 'staffs'])->name('staffs')->middleware('auth'); 
+
+Route::get('/dashboard/staffs/register', [HomeController::class, 'register'])->name('add-staff')->middleware('auth'); 
+
+Route::get('/dashboard/staffs/edit/{id}', [HomeController::class, 'edit_staff'])->name('edit-staff')->middleware('auth'); 
+
+Route::post('/dashboard/staffs/store/{id}', [HomeController::class, 'store_edited_user'])->name('store_edited_user')->middleware('auth');
 
 Route::get('/dashboard/about', [HomeController::class, 'about'])->name('about')->middleware('auth');
 

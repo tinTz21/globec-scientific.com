@@ -33,7 +33,7 @@
                 <tbody>
                     @foreach($products as $product)
                         <tr>
-                          <td data-label="Level" style=" color: #707070 !important; "> {{@$product->iteration}} </td>
+                          <td data-label="Level" style=" color: #707070 !important; "> {{@$loop->iteration}} </td>
                           <td data-label="Level" style=" color: #707070 !important; "> {{@$product->name}} </td>
                           <td data-label="Level" style=" color: #707070 !important; "> {{@$product->description}} </td>
                           <td data-label="Level" style=" color: #707070 !important; "> {{@$product->created_at->format('d-m, Y')}} </td>
