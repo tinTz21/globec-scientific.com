@@ -28,8 +28,9 @@
                           <td data-label="Level" style=" color: #707070 !important; "> {{@$loop->iteration}} </td>
                           <td data-label="Level" style=" color: #707070 !important; "> {{@$customer->name}} </td>
                           <td data-label="Level" style=" color: #707070 !important; "> {{@$customer->institution}} </td>
+
                           <td data-label="Level" style="color: {{isset($customer->product->name) ? 'green' : 'red'}};">
-                                {{isset($customer->product->name) ? $customer->product->name : 'Product Deleted'}} &nbsp; &nbsp;
+                                {{isset($customer->product->name) ? Illuminate\Support\Str::limit($customer->product->name, 50) : 'Product Deleted'}} &nbsp; &nbsp;
                             </td>
                           <td data-label="Level" style=" color: #707070 !important; "> {{@$customer->created_at->format('d-m, Y')}} </td>
                           <td data-label="Level" style="color: {{isset($customer->status) ? 'green' : 'red'}};">

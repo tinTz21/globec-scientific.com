@@ -6,8 +6,9 @@
                 <h1 style="color: #017C7A;">
                     {{@$about->name}}
                 </h1>
-                <p>
-                    {{@$about->description}}
+                <p style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
+                    
+                    <p>{{ Illuminate\Support\Str::limit($about->description, 400) }}</p>
                 </p>
 
                 <a href="{{route('home-about')}}" class="btn btn-outline-light rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
@@ -37,7 +38,9 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-
+                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
             </div>
         </div>
     </div>
@@ -63,10 +66,12 @@
                         <div class="col-md-6">
                           <div class="card-body">
                             <h5 class="card-title d-flex justify-content-center" style="color: #017C7A;">
-                                {{$product->name}}
+                                {{ Illuminate\Support\Str::limit($product->name, 20) }}
+                                
                             </h5>
                             <p class="card-text d-flex justify-content-center">
-                                {{$product->description}}
+                                
+                                {{ Illuminate\Support\Str::limit($product->description, 200) }}
                             </p>
                             
                           </div>
@@ -97,7 +102,8 @@
                  <hr>
                 <div>
                     <h3 class="d-flex justify-content-center">
-                        {{\App\Models\News::first()->name}}
+                        {{ Illuminate\Support\Str::limit(\App\Models\News::first()->name, 40) }}
+                        
                     </h3>
 
                     <a class="bi-arrow-right-circle text-light text-primary d-flex justify-content-center" style="font-size: 2rem; text-decoration: none;" href="{{route('home-show-news',\App\Models\News::first()->id)}}"></a>
@@ -109,7 +115,7 @@
                  <hr>
                 <div>
                     <h3 class="d-flex justify-content-center">
-                        {{\App\Models\Product::first()->name}}
+                        {{ Illuminate\Support\Str::limit(\App\Models\Product::first()->name, 40) }}
                     </h3>
 
                     <a class="bi-arrow-right-circle text-light d-flex justify-content-center" style="font-size: 2rem; text-decoration: none;" href="{{route('product_quote', \App\Models\Product::first()->id)}}"></a>
@@ -161,7 +167,9 @@
                       <!-- <img src="images/cancer.jpg    " class="card-img-top" alt="..."> -->
                     </div>
                       <div class="card-body">
-                        <h5 class="card-title d-flex justify-content-center">{{@$blog->name}}</h5>
+                        <h5 class="card-title d-flex justify-content-center">
+                            {{ Illuminate\Support\Str::limit($blog->name, 30) }}
+                        </h5>
                         <p class="card-text d-flex justify-content-center" >
                             {{$blog->description}}
                         </p>

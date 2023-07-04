@@ -34,8 +34,13 @@
                     @foreach($products as $product)
                         <tr>
                           <td data-label="Level" style=" color: #707070 !important; "> {{@$loop->iteration}} </td>
-                          <td data-label="Level" style=" color: #707070 !important; "> {{@$product->name}} </td>
-                          <td data-label="Level" style=" color: #707070 !important; "> {{@$product->description}} </td>
+                          <td data-label="Level" style=" color: #707070 !important; min-width: 10em;"> 
+                            {{ Illuminate\Support\Str::limit($product->name, 30) }}
+
+                          </td>
+                          <td data-label="Level" style=" color: #707070 !important; ">
+                            {{ Illuminate\Support\Str::limit($product->description, 150) }}
+                            </td>
                           <td data-label="Level" style=" color: #707070 !important; "> {{@$product->created_at->format('d-m, Y')}} </td>
                           <td data-label="Level" style=" color: #707070 !important; "> 
                             <a href="{{route('show-product',$product->id)}}">

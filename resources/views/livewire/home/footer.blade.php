@@ -9,7 +9,7 @@
                             About Globec
                         </h3>
                         <p class="d-flex justify-content-center" style="padding-left:2em">
-                            {{$about->description}}
+                            {{ Illuminate\Support\Str::limit($about->description, 300) }}
                         </p>
                     </div>
                     <div class="col-md-3 ">
@@ -55,7 +55,7 @@
                         @foreach($news as $blog)
                             <a href="{{route('home-show-news', $blog->id)}}" class="d-flex justify-content-left" style="text-decoration: none; padding-left: 1em; color: #33BAFA;">
                                 <i class="bi-dot"></i> 
-                                {{@$blog->name}}
+                                {{ Illuminate\Support\Str::limit($blog->name, 30) }}
                             </a>
                         @endforeach
                         
@@ -73,7 +73,7 @@
                        @foreach($products as $product)
                             <a href="{{route('product_quote',$product->id)}}" class="d-flex justify-content-left" style="text-decoration: none; padding-left: 1em; color: #33BAFA;">
                                 <i class="bi-dot"></i> 
-                                {{@$product->name}}
+                                {{ Illuminate\Support\Str::limit($product->name, 30) }}
                             </a>
                         @endforeach
                         

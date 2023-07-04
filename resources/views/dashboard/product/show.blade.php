@@ -6,12 +6,12 @@
         <div class="row bg-light" style="margin-top: 1em;">
             <div class="container-fluid" style="padding: 1em">
                 <div class="row">
-                    <div class="col-md-10">
+                    <div class="col-md-9">
                         <h3 style="color: #017C7A;">
-                            {{@$product->name}}
+                            {{ Illuminate\Support\Str::limit($product->name, 56) }}
                         </h3>
                     </div>
-                    <div class="col-md-2 d-flex justify-content-center">
+                    <div class="col-md-3 d-flex justify-content-center">
                         <a href="{{route('add-product')}}" class="btn btn-outline-secondary rounded-pill">
                             Add New
                         </a>
@@ -25,7 +25,7 @@
                       <div class="row g-0">
                         <div class="col-md-6 ">
                           <!-- <img src="/images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="..."> -->
-                          <img src="{{ url(isset($product->image) ? $product->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 50em;height: 15em;">
+                          <img src="{{ url(isset($product->image) ? $product->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 50em;height: 13em; min-width: 23em;">
                                
                         </div>
                         <div class="col-md-6">

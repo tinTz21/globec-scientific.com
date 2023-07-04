@@ -25,10 +25,11 @@
                                     <div class="col-md-6">
                                       <div class="card-body">
                                         <h5 class="card-title" style="color: #017C7A;">
-                                            {{$product->name}}
+                                          
+                                             {{ Illuminate\Support\Str::limit($product->name, 20) }}
                                         </h5>
                                         <p class="card-text">
-                                            {{$product->description}}
+                                            {{ Illuminate\Support\Str::limit($product->description, 200) }}
                                         </p>
                                         
                                       </div>
