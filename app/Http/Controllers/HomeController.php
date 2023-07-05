@@ -13,6 +13,7 @@ use Auth;
 use App\Models\AboutImage;
 use Illuminate\Support\Facades\Hash;
 
+
 class HomeController extends Controller
 {
     /**
@@ -114,9 +115,11 @@ class HomeController extends Controller
 
     public function edit_about($id){
         $about = About::find($id);
+        $about_images = AboutImage::latest()->paginate(8);
         $data = [
             'about'=>$about,
-        ];
+            'about_images' => $about_images,
+        ]; 
         return view('dashboard.edit_about')->with($data);
     } 
 

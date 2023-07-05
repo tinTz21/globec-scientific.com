@@ -18,7 +18,7 @@
                         <div class="col-md-12">
                           <div class="card-body">
                             <p class="card-text">
-                                {{$product->description}}
+                                {!! $product->description !!}
                             </p>
                           </div>
                         </div>

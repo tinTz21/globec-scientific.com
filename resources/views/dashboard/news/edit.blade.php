@@ -13,11 +13,13 @@
             <h3>
                 <input type="text" name="name" value="{{@$news->name}}" class="form-control">
             </h3>
-            <p>
-                <textarea rows="6" name="description" class="form-control" required>
-                    {{@$news->description}}
+            <div class="form-group">
+                <label>Edit Content</label>
+                <textarea class="tinymce-editor form-control" name="description">
+                    {!! @$news->description !!}
                 </textarea>
-            </p>
+            </div>
+            <br>
             <input type="file" class="form-control" name="image" required>
             <br>
             <a href="{{route('more-news',@$news->id)}}" class="btn btn-outline-secondary rounded-pill">
@@ -29,5 +31,25 @@
             </form>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+      
+        <script type="text/javascript">
+                tinymce.init({
+                selector: 'textarea.tinymce-editor',
+                height: 300,
+                menubar: false,
+                plugins: [
+                    'advlist autolink lists link image charmap print preview anchor',
+                    'searchreplace visualblocks code fullscreen',
+                    'insertdatetime media table paste code help wordcount', 'image'
+                ],
+                toolbar: 'undo redo | formatselect | ' +
+                    'bold italic backcolor | alignleft aligncenter ' +
+                    'alignright alignjustify | bullist numlist outdent indent | ' +
+                    'removeformat | help',
+                content_css: '//www.tiny.cloud/css/codepen.min.css'
+            });
+        </script>
 </div>
 @endsection

@@ -12,7 +12,7 @@
                 {{$contact->name}}
             </h3>
             <p>
-                {{$contact->description}}
+                {!! $contact->description !!}
             </p>
             <a href="{{route('edit-contact',$contact->id)}}" class="btn btn-outline-secondary">
                 Edit

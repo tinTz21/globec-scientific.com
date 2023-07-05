@@ -29,7 +29,7 @@
                                              {{ Illuminate\Support\Str::limit($product->name, 20) }}
                                         </h5>
                                         <p class="card-text">
-                                            {{ Illuminate\Support\Str::limit($product->description, 200) }}
+                                            {!! Illuminate\Support\Str::limit($product->description, 200) !!}
                                         </p>
                                         
                                       </div>

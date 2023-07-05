@@ -8,7 +8,7 @@
                 </h1>
                 <p style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
                     
-                    <p>{{ Illuminate\Support\Str::limit($about->description, 400) }}</p>
+                    <p>{!! Illuminate\Support\Str::limit($about->description, 400) !!}</p>
                 </p>
 
                 <a href="{{route('home-about')}}" class="btn btn-outline-light rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
@@ -69,7 +69,7 @@
                             </h5>
                             <p class="card-text d-flex justify-content-center">
                                 
-                                {{ Illuminate\Support\Str::limit($product->description, 200) }}
+                                {!! Illuminate\Support\Str::limit($product->description, 200) !!}
                             </p>
                             
                           </div>
@@ -169,7 +169,7 @@
                             {{ Illuminate\Support\Str::limit($blog->name, 28) }}
                         </h5>
                         <p class="card-text d-flex justify-content-center" >
-                            {{ Illuminate\Support\Str::limit($blog->description, 183) }}
+                            {!! Illuminate\Support\Str::limit($blog->description, 183) !!}
                         </p>
                         <a href="{{route('home-show-news',$blog->id)}}" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">Learn More...</a>
                       </div>

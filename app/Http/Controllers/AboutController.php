@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\About;
+use App\Models\About; 
+use App\Models\AboutImage;
 
 class AboutController extends Controller
 {
@@ -15,8 +16,10 @@ class AboutController extends Controller
     public function about()
     {
         $about = About::first();
+        $about_images = AboutImage::latest()->paginate(8);
         $data = [
             'about' => $about,
+            'about_images' => $about_images,
         ];
         return view('about.show')->with($data);
     }

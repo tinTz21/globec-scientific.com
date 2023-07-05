@@ -39,7 +39,7 @@
 
                           </td>
                           <td data-label="Level" style=" color: #707070 !important; ">
-                            {{ Illuminate\Support\Str::limit($product->description, 150) }}
+                            {!! Illuminate\Support\Str::limit($product->description, 150) !!}
                             </td>
                           <td data-label="Level" style=" color: #707070 !important; "> {{@$product->created_at->format('d-m, Y')}} </td>
                           <td data-label="Level" style=" color: #707070 !important; "> 

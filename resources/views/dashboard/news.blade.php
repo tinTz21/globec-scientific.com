@@ -41,7 +41,7 @@
                             {{ Illuminate\Support\Str::limit($blog->name, 30) }}
                             </td>
                           <td data-label="Level" style=" color: #707070 !important; ">
-                            {{ Illuminate\Support\Str::limit($blog->description, 150) }}
+                            {!! Illuminate\Support\Str::limit($blog->description, 150) !!}
                             </td>
                           <td data-label="Level" style="width: 8em; color: #707070 !important; "> {{@$blog->created_at->format('d-m, Y')}} </td>
                           <td data-label="Level" style=" color: #707070 !important; "> 

@@ -18,7 +18,7 @@
                       <div class="card-body">
                         
                         <p class="card-text">
-                            {{$news->description}}
+                            {!! $news->description !!}
                         </p>
                         <a href="{{route('home-news')}}" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">Back</a>
                       </div>

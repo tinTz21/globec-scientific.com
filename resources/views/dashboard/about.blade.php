@@ -10,7 +10,7 @@
                         {{$about->name}}
                     </h1>
                     <p>
-                        {{$about->description}}
+                        {!! $about->description !!}
                     </p>
                     <a href="{{route('edit-about',$about->id)}}" class="btn btn-outline-secondary">
                         Edit

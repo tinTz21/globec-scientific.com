@@ -22,7 +22,7 @@
                             {{$news->name}}
                         </h5>
                         <p class="card-text">
-                            {{$news->description}} 
+                            {!! $news->description !!} 
                         </p>
                         <a href="{{route('news')}}" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">
                             Back

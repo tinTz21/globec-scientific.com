@@ -39,7 +39,7 @@
                             {{$news->name}}
                         </h5>
                         <p class="card-text">
-                            {{$news->description}} 
+                            {!! $news->description !!} 
                         </p>
                       </div>
                     </div>

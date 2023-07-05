@@ -9,7 +9,7 @@
                             About Globec
                         </h3>
                         <p class="d-flex justify-content-center" style="padding-left:2em">
-                            {{ Illuminate\Support\Str::limit($about->description, 300) }}
+                            {!! Illuminate\Support\Str::limit($about->description, 300) !!}
                         </p>
                     </div>
                     <div class="col-md-3 ">
