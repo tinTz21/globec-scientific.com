@@ -28,7 +28,8 @@
                                                 <div class="col-md-12">
                                                       
                                                     <a href="{{route('show-product',$product->id)}}" style="text-decoration: none;">
-                                                        {{$product->name}} &nbsp; <i class="bi-eye" style="font-size: 1em;"></i>
+                                                        {{ Illuminate\Support\Str::limit($product->name, 30) }}
+                                                         &nbsp; <i class="bi-eye" style="font-size: 1em;"></i>
                                                     </a>
                                                 </div>
                                             @endforeach
@@ -49,9 +50,9 @@
                                 <div class="card-body">
                                     @foreach($customers as $customer)
                                         <div class="col-md-12">
-                                             
                                             <a href="{{route('show-customers',$customer->id)}}" style="text-decoration: none;">
-                                                {{$customer->name}} &nbsp; <i class="bi-eye" style="font-size: 1em;"></i>
+                                                {{ Illuminate\Support\Str::limit($customer->name, 30) }}
+                                                 &nbsp; <i class="bi-eye" style="font-size: 1em;"></i>
                                             </a>
                                         </div>
                                     @endforeach
@@ -72,7 +73,8 @@
                                         <div class="col-md-12">
                                            
                                             <a href="{{route('more-news',$blog->id)}}" style="text-decoration: none;">
-                                                 {{$blog->name}} &nbsp; <i class="bi-eye" style="font-size: 1em;"></i>
+                                                {{ Illuminate\Support\Str::limit($blog->name, 30) }}
+                                                  &nbsp; <i class="bi-eye" style="font-size: 1em;"></i>
                                             </a>
                                         </div>
                                     @endforeach

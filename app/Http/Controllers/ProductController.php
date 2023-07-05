@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\Quote;
 use Auth;
 
+
 class ProductController extends Controller
 {
     /**
@@ -16,7 +17,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::latest()->get();
+        $products = Product::latest()->paginate(6);
         $data = [
             'products' => $products,
         ];

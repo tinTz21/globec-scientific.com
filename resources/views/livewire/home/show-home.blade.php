@@ -39,8 +39,6 @@
                         </button>
                     </div>
                      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-</body> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-</body>
             </div>
         </div>
     </div>
@@ -86,8 +84,8 @@
                 </div>
             @endforeach
 
-            <div class="col-md-12">
-                {{-- @$product->links() --}}
+            <div class="col-md-12 d-flex justify-content-center">
+                {{ @$products->links() }}
             </div>
 
         </div>
@@ -168,18 +166,18 @@
                     </div>
                       <div class="card-body">
                         <h5 class="card-title d-flex justify-content-center">
-                            {{ Illuminate\Support\Str::limit($blog->name, 30) }}
+                            {{ Illuminate\Support\Str::limit($blog->name, 28) }}
                         </h5>
                         <p class="card-text d-flex justify-content-center" >
-                            {{$blog->description}}
+                            {{ Illuminate\Support\Str::limit($blog->description, 183) }}
                         </p>
                         <a href="{{route('home-show-news',$blog->id)}}" class="btn btn-outline-secondary rounded-pill" style="border-color: #33BAFA; color: #33BAFA;">Learn More...</a>
                       </div>
                     </div>
                </div>
             @endforeach
-            <div>
-                {{-- $news->links() --}}
+            <div class="col-md-12 d-flex justify-content-center">
+                {{ @$news->links() }}
             </div>
         </div>
     </div>

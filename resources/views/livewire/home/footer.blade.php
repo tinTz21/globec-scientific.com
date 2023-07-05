@@ -59,7 +59,7 @@
                             </a>
                         @endforeach
                         
-                        <div class="col-md-12">
+                        <div class="container-fluid">
                             {{$news->links()}}
                         </div>
                        
@@ -78,7 +78,7 @@
                         @endforeach
                         
                         <div class="col-md-12">
-                            {{$news->links()}}
+                            {{$products->links()}}
                         </div>
                        
                         

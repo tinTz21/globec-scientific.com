@@ -24,6 +24,9 @@
                
             </div>
         @endforeach
+        <div class="col-md-12">
+            {{$news->links('pagination::bootstrap-5')}}
+        </div>
     </div>
 </div>
 @endsection

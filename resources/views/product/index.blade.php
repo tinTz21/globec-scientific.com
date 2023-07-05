@@ -46,7 +46,7 @@
                         @endforeach
 
                         <div class="col-md-12">
-                            {{-- @$product->links() --}}
+                            {{$products->links('pagination::bootstrap-5')}}
                         </div>
 
                     </div>
