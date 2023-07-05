@@ -24,7 +24,7 @@
                             @foreach($about_images as $image)
                                 <div class="carousel-item @if($loop->first) active @endif">
                                     <div class="slider-image text-center">
-                                        <img src="{{ url(isset($image->name) ? $image->name : 'images/nopic.jpg') }}" class="d-block w-100" alt="Globec Scientific Ltd">
+                                        <img src="{{ url(isset($image->name) ? $image->name : 'images/nopic.jpg') }}" height="300em" class="d-block w-100" alt="Globec Scientific Ltd">
                                     </div>
                                 </div>
                             @endforeach
