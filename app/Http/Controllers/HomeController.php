@@ -145,8 +145,6 @@ class HomeController extends Controller
 
     public function store_product(Request $request){
         $request->validate([
-            'name' => 'required',
-            'description'=>'required',
             'image'=>'required'
         ]);
 
@@ -162,7 +160,7 @@ class HomeController extends Controller
 
         $product = Product::updateOrCreate(
             ['id'=>$request->id],
-            ['name'=>$request->name,'description'=>$request->description,'translator_id'=>Auth::user()->id, 'updator_id'=>Auth::user()->id, 'image'=>$image]
+            ['image'=>$image]
         );
 
 

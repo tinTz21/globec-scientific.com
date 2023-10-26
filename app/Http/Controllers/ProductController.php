@@ -7,7 +7,7 @@ use App\Models\Product;
 use App\Models\Quote;
 use Auth;
 
-
+ 
 class ProductController extends Controller
 {
     /**

@@ -13,6 +13,11 @@
                     </div>
                     <div class="col-md-3 d-flex justify-content-center">
                         <a href="{{route('add-product')}}" class="btn btn-outline-secondary rounded-pill">
+                            Add Category
+                        </a>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center">
+                        <a href="{{route('add-product')}}" class="btn btn-outline-secondary rounded-pill">
                             Add New
                         </a>
                     </div>
@@ -31,7 +36,7 @@
                         <div class="col-md-6">
                           <div class="card-body">   
                             <p class="card-text">
-                                {{$product->description}}
+                                {!! $product->description !!}
                             </p>
                           </div>
                         </div>

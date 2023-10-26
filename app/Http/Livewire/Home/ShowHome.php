@@ -14,12 +14,14 @@ class ShowHome extends Component
     use WithPagination;
      protected $paginationTheme = 'bootstrap';
 
+     // clear out filtering after searching
      public function updatingSearch()
     {
         $this->resetPage('productPage');
         $this->resetPage('newsPage');
     }
 
+    //renders home page
     public function render()
     {
         $about = About::first();
