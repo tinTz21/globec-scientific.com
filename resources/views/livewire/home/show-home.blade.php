@@ -1,4 +1,17 @@
 <div wire:poll.visible style="margin-top: 1em;" >
+    <style type="text/css">
+        .i-circle {
+            display: inline-block;
+            background-color: #ff0000;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 22px;
+            line-height: 30px; /* set to same size as width, height */
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
+    </style>
     {{-- Close your eyes. Count to one. That is how long forever feels. --}}
     <div class="container-fluid bg-light">
         <div class="row">
@@ -49,11 +62,13 @@
         <div class="row">
             <div class="col-md-12" >
                 <h3 style=" color: #017C7A;">
-                    Our Products and Solutions
+                   Product & Solution Categories
                 </h3>
             </div>
 
-            @foreach($products as $product)
+            {{--
+            After opening sub-category use this
+             @foreach($products as $product)
                 <div class="col-md-6">
                     <div class="card mb-3 border bg-light" style="max-width: 540px;">
                       <div class="row g-0">
@@ -82,10 +97,29 @@
                         </div>
                     </div>
                 </div>
+            @endforeach --}}
+
+            @foreach($categories as $product)
+                <div class="col-md-6">
+                    <div class="card mb-3 border bg-light" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-12">
+                          <div class="card-body">
+                            <h5 class="card-title " style="color: #017C7A;">
+                                <span class="i-circle">
+                                    {{substr($product->name, 0, 1)}}
+                                </span>
+                                {{ Illuminate\Support\Str::limit($product->name, 20) }}
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
             @endforeach
 
             <div class="col-md-12 d-flex justify-content-center">
-                {{ @$products->links() }}
+                {{ @$categories->links() }}
             </div>
 
         </div>

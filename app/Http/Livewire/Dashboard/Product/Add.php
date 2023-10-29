@@ -8,10 +8,13 @@ use App\Models\Quote;
 use App\Models\ProductSubCategory;
 use App\Models\ProductCategory;
 use Auth;
+use Livewire\WithFileUploads;
 
 class Add extends Component
 {
-    public $category_id, $sub_category_list, $sub_category_id, $category_name, $description;
+    use WithFileUploads;
+
+    public $category_id, $sub_category_list, $sub_category_id, $category_name, $description, $image;
 
     public function mount(){
         $this->category_id = 0;
@@ -42,10 +45,13 @@ class Add extends Component
             'category_name' => 'required',
             'description' => 'required',
             'category_id' => 'required',
+             'image' => 'image|max:1024'
         ]);
 
+        $path = $this->image->store('products');
+
         $product = Product::updateOrCreate(
-            ['name'=>$this->category_name,'description'=>$this->description,'translator_id'=>Auth::user()->id, 'updator_id'=>Auth::user()->id, 'product_categories_id'=>$this->category_id, 'product_sub_categories_id'=>$this->sub_category_id]
+            ['name'=>$this->category_name,'description'=>$this->description,'translator_id'=>Auth::user()->id, 'updator_id'=>Auth::user()->id, 'product_categories_id'=>$this->category_id, 'product_sub_categories_id'=>$this->sub_category_id, 'image'=>$path]
         );
 
         $this->next = 1;

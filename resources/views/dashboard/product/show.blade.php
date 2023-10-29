@@ -29,8 +29,11 @@
                     <div class="card mb-3 border-0 bg-light" >
                       <div class="row g-0">
                         <div class="col-md-6 ">
-                          <!-- <img src="/images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="..."> -->
+                          <!-- <img src="/images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="..."> storage/app/products -->
                           <img src="{{ url(isset($product->image) ? $product->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 50em;height: 13em; min-width: 23em;">
+
+                          <img src="{{ asset('/storage/app/products'.$product->image) }}" alt="image" style="border-radius: 2px;max-width: 50em;height: 13em; min-width: 23em;">
+
                                
                         </div>
                         <div class="col-md-6">

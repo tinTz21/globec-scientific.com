@@ -147,6 +147,7 @@ class HomeController extends Controller
         $request->validate([
             'image'=>'required'
         ]);
+        dd($request->all());
 
         $file = \Request::file('image');
         if ($file) {

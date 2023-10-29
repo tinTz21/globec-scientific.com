@@ -4,10 +4,10 @@
         <div class="row">
 
             <div class="col-md-11">
-                <i class="bi-telephone-fill text-light" style="font-size: 1rem;"></i> +255 653 502 932
+                <i class="bi-telephone-fill text-light" style="font-size: 1rem;"></i> +255 747 626 716
                 &nbsp; &nbsp;
                 <i class="bi-envelope text-light" style="font-size: 1rem;"></i> 
-                charles@globecscientific.com
+                sales@globecscientific.com
             </div>
 
             <div class="col-md-1 d-flex justify-content-center">

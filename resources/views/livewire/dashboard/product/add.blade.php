@@ -37,8 +37,14 @@
                         <textarea class="tinymce-editor form-control" wire:model="description"></textarea>
                     </div>
                     <br>
+                    @if ($image)
+                        Photo Preview:
+                        <img src="{{ $image->temporaryUrl() }}" width="50%">
+                    @endif
+                    <input class="form-control" type="file" wire:model="image">
+                    @error('image') <span class="error">{{ $message }}</span> @enderror 
 
-                    {{-- <input class="form-control" type="file" name="image"> --}}
+                    <div wire:loading wire:target="image">Uploading...</div>
                     <br>
                     <a class="btn btn-outline-secondary rounded-pill" href="{{route('products')}}">
                         Back
@@ -48,6 +54,8 @@
                     </button>
                 </form>
                 @else($this->next == '1')
+                    <h2>Saved Successful!</h2>
+                    {{-- @livewire('dashboard.product.product-photo')
                     <form method="POST" action="{{route('store_product')}}"  enctype="multipart/form-data" >
                         @csrf 
                         <div class="col-md-12">
@@ -59,7 +67,7 @@
                                 Save
                             </button>
                         </div>
-                    </form>
+                    </form>--}}
                 @endif
 
         

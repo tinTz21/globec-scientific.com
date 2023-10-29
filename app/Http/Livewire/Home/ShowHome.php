@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\News;
 use App\Models\AboutImage;
 use Livewire\WithPagination;
+use App\Models\ProductCategory;
 
 class ShowHome extends Component
 {
@@ -26,6 +27,7 @@ class ShowHome extends Component
     {
         $about = About::first();
         $products = Product::latest()->paginate(4, ['*'], 'productPage');
+        $categories= ProductCategory::latest()->paginate(4, ['*'], 'productCategories');
         $news = News::latest()->paginate(4, ['*'], 'newsPage');
         $blogs = News::latest()->paginate(6, ['*'], 'blogPage');
         $about_images = AboutImage::latest()->paginate(4, ['*'], 'sliderPage');
@@ -35,6 +37,7 @@ class ShowHome extends Component
             'news'=> $news,
             'blogs' => $blogs,
             'about_images' => $about_images,
+            'categories'=>$categories,
 
         ];
         return view('livewire.home.show-home')->with($data);
