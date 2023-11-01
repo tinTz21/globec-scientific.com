@@ -70,7 +70,7 @@
                           <button class="dropbtn">PRODUCTS AND SOLUTIONS</button>
                           <div class="dropdown-content">
                             @foreach(\App\Models\ProductCategory::all() as $menu)
-                                <a href="#">
+                                <a href="{{route('category',$menu->id)}}">
                                    <i class="bi bi-bookmarks"></i>
                                     {{ Illuminate\Support\Str::limit($menu->name, 22) }}
                                 </a>

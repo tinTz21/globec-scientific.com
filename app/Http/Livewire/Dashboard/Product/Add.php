@@ -40,7 +40,7 @@ class Add extends Component
     }
 
     public function storeProduct(){
-        // dd($this->all());
+        $check_sub_category = is_null($this->sub_category_id) ? 0 : $this->sub_category_id; 
         $validate = $this->validate([
             'category_name' => 'required',
             'description' => 'required',
@@ -51,7 +51,7 @@ class Add extends Component
         $path = $this->image->store('products');
 
         $product = Product::updateOrCreate(
-            ['name'=>$this->category_name,'description'=>$this->description,'translator_id'=>Auth::user()->id, 'updator_id'=>Auth::user()->id, 'product_categories_id'=>$this->category_id, 'product_sub_categories_id'=>$this->sub_category_id, 'image'=>$path]
+            ['name'=>$this->category_name,'description'=>$this->description,'translator_id'=>Auth::user()->id, 'updator_id'=>Auth::user()->id, 'product_categories_id'=>$this->category_id, 'product_sub_categories_id'=>$check_sub_category, 'image'=>$path]
         );
 
         $this->next = 1;

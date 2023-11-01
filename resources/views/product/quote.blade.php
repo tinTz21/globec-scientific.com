@@ -24,7 +24,7 @@
                         </div>
                       </div>
                       <div class="row g-0" style="padding: 1em">
-                           <a href="{{route('home-product')}}" class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
+                           <a href="/" class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
                                 <i class="bi-arrow-left"></i> Back
                             </a>
                         </div>
@@ -41,23 +41,23 @@
         		</h3>
         		<div class="form-group">
         			<label>Add Name</label>
-        			<input type="text" name="name" class="form-control" required placeholder="e.g. Charles Magome">
+        			<input type="text" name="name" class="form-control" required placeholder="e.g. Iren Charles">
         		</div>
         		
         		<div class="row">
         			<div class="form-group col-md-6"><br>
 	        			<label>Add Email</label>
-	        			<input type="email" name="email" class="form-control" required placeholder="e.g. charles@globecscientific.com">
+	        			<input type="email" name="email" class="form-control" required placeholder="e.g. email@email.mail">
 	        		</div>
 	        		<div class="form-group col-md-6"><br>
 	        			<label>Add Phone</label>
-	        			<input type="number" name="phone" class="form-control" required placeholder="e.g. 758 477 573">
+	        			<input type="number" name="phone" class="form-control" required placeholder="e.g. 758 477 593">
 	        		</div>
         		</div>
 
         		<div class="form-group"><br>
         			<label>Add Your Institution</label>
-        			<input type="text" name="institution" class="form-control" required placeholder="e.g. Charles Magome">
+        			<input type="text" name="institution" class="form-control" required placeholder="e.g. Magome Hospital">
         		</div>
 
         		<div class="form-group"><br>
@@ -83,9 +83,9 @@
         			<br>
         		</div>
 
-        		<div class="col-md-2 d-flex justify-content-center">
+        		<div class="col-md-3 d-flex justify-content-center">
         			<button type="submit" class="btn btn-outline-secondary rounded-pill">
-	        			Submit
+	        		     <i class="bi-cart4"></i>	Place Order
 	        		</button>
         		</div>
         		</form>

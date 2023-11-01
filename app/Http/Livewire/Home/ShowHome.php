@@ -27,7 +27,7 @@ class ShowHome extends Component
     {
         $about = About::first();
         $products = Product::latest()->paginate(4, ['*'], 'productPage');
-        $categories= ProductCategory::latest()->paginate(4, ['*'], 'productCategories');
+        $categories= ProductCategory::latest()->paginate(6, ['*'], 'productCategories');
         $news = News::latest()->paginate(4, ['*'], 'newsPage');
         $blogs = News::latest()->paginate(6, ['*'], 'blogPage');
         $about_images = AboutImage::latest()->paginate(4, ['*'], 'sliderPage');

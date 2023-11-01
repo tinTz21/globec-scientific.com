@@ -2,7 +2,7 @@
     <style type="text/css">
         .i-circle {
             display: inline-block;
-            background-color: #ff0000;
+            background-color: #017C7A;
             color: #fff;
             border-radius: 50%;
             font-size: 22px;
@@ -66,62 +66,28 @@
                 </h3>
             </div>
 
-            {{--
-            After opening sub-category use this
-             @foreach($products as $product)
-                <div class="col-md-6">
-                    <div class="card mb-3 border bg-light" style="max-width: 540px;">
-                      <div class="row g-0">
-                        <div class="col-md-6 d-flex justify-content-center">
-                          <img src="{{ url(isset($product->image) ? $product->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 19em; max-height: 10.5em; margin-top: 1.3em;"> 
-                          <!-- border:1px solid #28a8e4; -->
-                        </div>
-                        <div class="col-md-6">
-                          <div class="card-body">
-                            <h5 class="card-title d-flex justify-content-center" style="color: #017C7A;">
-                                {{ Illuminate\Support\Str::limit($product->name, 20) }}
-                                
-                            </h5>
-                            <p class="card-text d-flex justify-content-center">
-                                
-                                {!! Illuminate\Support\Str::limit($product->description, 200) !!}
-                            </p>
-                            
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row g-0" style="padding: 1em">
-                           <a href="{{route('product_quote',$product->id)}}" class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;">
-                                <i class="bi-cart"></i> Place Order
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            @endforeach --}}
-
-            @foreach($categories as $product)
+            @foreach($categories as $category)
                 <div class="col-md-6">
                     <div class="card mb-3 border bg-light" style="max-width: 540px;">
                       <div class="row g-0">
                         <div class="col-md-12">
                           <div class="card-body">
-                            <h5 class="card-title " style="color: #017C7A;">
+                            <a href="{{route('category',$category->id)}}" class="card-title " style="color: #017C7A; font-size: 18px; text-decoration: none;">
                                 <span class="i-circle">
-                                    {{substr($product->name, 0, 1)}}
-                                </span>
-                                {{ Illuminate\Support\Str::limit($product->name, 20) }}
-                            </h5>
+                                    {{substr($category->name, 0, 1)}}
+                                </span> 
+                                &nbsp;
+                                    {{ Illuminate\Support\Str::limit($category->name, 20) }}
+                            </a>
                           </div>
                         </div>
                       </div>
                     </div>
                 </div>
             @endforeach
-
             <div class="col-md-12 d-flex justify-content-center">
                 {{ @$categories->links() }}
             </div>
-
         </div>
     </div>
     <!-- End products -->
@@ -180,8 +146,6 @@
 
         </div>
     </div>
-
-
 
     <div class="container-fluid bg-light" style="padding: 2em; margin-top: 1em;">
         <div class="container-fluid">

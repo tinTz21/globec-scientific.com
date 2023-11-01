@@ -8,6 +8,7 @@ use App\Http\Controllers\CareerController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsController; 
 use App\Http\Controllers\AboutImageController;
+use App\Http\Controllers\CategoryController;
  
 /*
 |--------------------------------------------------------------------------
@@ -122,4 +123,8 @@ Route::get('/customers', [ProductController::class, 'customer_list'])->name('cus
 
 Route::get('/customers/show/{id}', [ProductController::class, 'show'])->name('show-customers')->middleware('auth');
 
-Route::get('/customers/sorted/{id}', [ProductController::class, 'sorted'])->name('customer-sorted')->middleware('auth');
+Route::get('/customers/sorted/{id}', [ProductController::class, 'sorted'])->name('customer-sorted')->middleware('auth');  
+
+Route::get('/customers/sorted/{id}', [CategoryController::class, 'sub_categorized_product'])->name('sub_categorized_product');
+
+Route::get('/product/category/{id}', [CategoryController::class, 'index'])->name('category');
