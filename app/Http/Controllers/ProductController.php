@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Quote;
+use App\Models\ProductSubCategory;
+use App\Models\ProductCategory;
 use Auth;
 
  
@@ -120,5 +122,15 @@ class ProductController extends Controller
             'customers' => $customers,
         ];
         return view('dashboard.quote.index')->with($data);
+    }
+
+    public function sub_category_products($id){
+        $product_sub_category = ProductSubCategory::findOrFail($id);
+        $products = Product::where('product_sub_categories_id',$id)->latest()->get();
+        $data = [
+            'products'=>$products,
+            'product_sub_categories'=>$product_sub_category,
+        ];
+        return view('dashboard.product.index')->with($data);
     }
 }

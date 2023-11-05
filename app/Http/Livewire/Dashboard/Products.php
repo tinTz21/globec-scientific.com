@@ -118,6 +118,7 @@ class Products extends Component
 
     public function resetSubCategory(){
         $this->sub_category_id == null;
+        
         $this->open_category_input == '3';
         $this->openSubCategoryInput = 0;
         $this->sub_category_name = null;
@@ -133,5 +134,13 @@ class Products extends Component
         $this->sub_category_name = $sub_category->name;
         $this->sub_category_id = $id;
         $this->openSubCategoryInput = 1;
+    }
+
+    public function openSubCategoryPopUp($id){
+        // $this->open_category_input = 3;
+        $category = ProductCategory::find($id);
+        $this->category_name = $category->name;
+        $this->category_id = $id;
+        $this->sub_cat_list = $category->subCategory;
     }
 }

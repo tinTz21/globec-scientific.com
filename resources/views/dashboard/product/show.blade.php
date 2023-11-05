@@ -11,16 +11,6 @@
                             {{ Illuminate\Support\Str::limit($product->name, 56) }}
                         </h3>
                     </div>
-                    <div class="col-md-3 d-flex justify-content-center">
-                        <a href="{{route('add-product')}}" class="btn btn-outline-secondary rounded-pill">
-                            Add Category
-                        </a>
-                    </div>
-                    <div class="col-md-3 d-flex justify-content-center">
-                        <a href="{{route('add-product')}}" class="btn btn-outline-secondary rounded-pill">
-                            Add New
-                        </a>
-                    </div>
                     <hr>
                 </div>  
             </div>
@@ -32,7 +22,7 @@
                           <!-- <img src="/images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="..."> storage/app/products -->
                           <img src="{{ url(isset($product->image) ? $product->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 50em;height: 13em; min-width: 23em;">
 
-                          <img src="{{ asset('/storage/app/products'.$product->image) }}" alt="image" style="border-radius: 2px;max-width: 50em;height: 13em; min-width: 23em;">
+                          {{-- <img src="{{ asset('/storage/app/'.$product->image) }}" alt="image" style="border-radius: 2px;max-width: 50em;height: 13em; min-width: 23em;"> --}}
 
                                
                         </div>
@@ -52,7 +42,7 @@
                            </div>
                            <div class="col-md-4">
                                <a class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;" href="{{route('edit-product',$product->id)}}">
-                                <i class="bi-cart"></i> Edit
+                                <i class="bi-cart"></i> Edit 
                             </a>
                            </div>
                            <div class="col-md-4">

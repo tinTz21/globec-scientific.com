@@ -13,7 +13,7 @@ use App\Models\ProductCategory;
 class ShowHome extends Component
 {
     use WithPagination;
-     protected $paginationTheme = 'bootstrap';
+    protected $paginationTheme = 'bootstrap';
 
      // clear out filtering after searching
      public function updatingSearch()

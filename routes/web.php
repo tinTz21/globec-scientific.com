@@ -82,6 +82,8 @@ Route::get('/about', [AboutController::class, 'about'])->name('home-about');
 
 Route::get('/product_and_solutions', [ProductController::class, 'index'])->name('home-product');
 
+Route::get('/sub-category/products/{id}', [ProductController::class, 'sub_category_products'])->name('sub-product')->middleware('auth');
+
 Route::get('/career', [CareerController::class, 'index'])->name('home-career');
 
 Route::get('/contact-us', [ContactController::class, 'index'])->name('home-contact');

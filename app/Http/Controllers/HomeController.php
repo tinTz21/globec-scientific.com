@@ -173,6 +173,8 @@ class HomeController extends Controller
         $product = Product::find($id);
         $data = [
             'product'=>$product,
+            'category_id'=>$product->product_categories_id,
+            'sub_category_id'=>$product->product_sub_categories_id,
         ];
         return view('dashboard.edit_product')->with($data);
     }

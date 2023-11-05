@@ -23,6 +23,9 @@
                                         <div class="col-md-12 ">
 
                                             <img src="{{ url(isset($product->image) ? $product->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 100%; margin-top: 1.3em;"> 
+
+                                            <img src="{{ asset('storage/app' .'/'.$product->image) }} " />
+
                                           <!-- <img src="images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="..."> -->
                                         </div>
                                         <div class="col-md-6">
