@@ -42,7 +42,9 @@
                         <img src="{{ $image->temporaryUrl() }}" width="50%">
                     @endif
                     <input class="form-control" type="file" wire:model="image">
-                    @error('image') <span class="error">{{ $message }}</span> @enderror 
+                    @error('image') 
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror 
  
                     <div wire:loading wire:target="image">Uploading...</div>
                     <br>

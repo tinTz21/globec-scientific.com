@@ -20,15 +20,12 @@
                       <div class="row g-0">
                         <div class="col-md-6 ">
                           <!-- <img src="/images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="..."> storage/app/products -->
-                          <img src="{{ url(isset($product->image) ? $product->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 50em;height: 13em; min-width: 23em;">
-
-                          {{-- <img src="{{ asset('/storage/app/'.$product->image) }}" alt="image" style="border-radius: 2px;max-width: 50em;height: 13em; min-width: 23em;"> --}}
-
-                               
+                          <img src="{{ url(isset($product->image) ? 'uploads/products/'.$product->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 50em;height: 13em; min-width: 23em;">  
                         </div>
                         <div class="col-md-6">
                           <div class="card-body">   
                             <p class="card-text">
+                                <h4>Product/Solution Description</h4>
                                 {!! $product->description !!}
                             </p>
                           </div>
@@ -36,7 +33,7 @@
                       </div>
                       <div class="row g-0" style="padding: 1em">
                         <div class="col-md-4">
-                               <a class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;" href="{{route('products')}}">
+                               <a class="form-control btn btn-outline-secondary rounded-pill" style="padding: 0.5em; border-color: #33BAFA; color: #33BAFA;" href="{{route('sub-product',$product->product_sub_categories_id)}}">
                                 <i class="bi-arrow-left"></i> Back
                             </a>
                            </div>

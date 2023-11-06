@@ -9,6 +9,7 @@ use App\Models\ProductSubCategory;
 use App\Models\ProductCategory;
 use Auth;
 use Livewire\WithFileUploads;
+use Carbon\Carbon;
 
 class Add extends Component
 {
@@ -46,13 +47,13 @@ class Add extends Component
             'product_name' => 'required',
             'description' => 'required',
             'category_id' => 'required',
-             'image' => 'max:5024'
+             'image' => 'required|max:5024'
         ]);
-
-        $path = $this->image->store('public');
+        $imageUrl = Carbon::now()->timestamp. '.' .$this->image->extension();
+        $storeImage = $this->image->storeAs('products', $imageUrl);
 
         $product = Product::updateOrCreate(
-            ['name'=>$this->product_name,'description'=>$this->description,'translator_id'=>Auth::user()->id, 'updator_id'=>Auth::user()->id, 'product_categories_id'=>$this->category_id, 'product_sub_categories_id'=>$check_sub_category, 'image'=>$path]
+            ['name'=>$this->product_name,'description'=>$this->description,'translator_id'=>Auth::user()->id, 'updator_id'=>Auth::user()->id, 'product_categories_id'=>$this->category_id, 'product_sub_categories_id'=>$check_sub_category, 'image'=>$imageUrl]
         );
 
         $this->next = 1;
