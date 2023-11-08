@@ -37,10 +37,10 @@
                         <textarea class="tinymce-editor form-control" wire:model="description"></textarea>
                     </div>
                     <br>
-                    @if ($image)
+                    {{-- @if ($image)
                         Photo Preview:
                         <img src="{{ $image->temporaryUrl() }}" width="50%">
-                    @endif
+                    @endif --}}
                     <input class="form-control" type="file" wire:model="image">
                     @error('image') 
                         <span class="text-danger">{{ $message }}</span>
