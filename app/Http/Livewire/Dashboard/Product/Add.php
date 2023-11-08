@@ -47,7 +47,7 @@ class Add extends Component
             'product_name' => 'required',
             'description' => 'required',
             'category_id' => 'required',
-             'image' => 'required|max:5024'
+             // 'image' => 'required|max:5024'
         ]);
         $imageUrl = Carbon::now()->timestamp. '.' .$this->image->extension();
         $storeImage = $this->image->storeAs('products', $imageUrl);
