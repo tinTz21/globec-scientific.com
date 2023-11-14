@@ -2,6 +2,8 @@
     {{-- The Master doesn't talk, he acts. --}}
     <div class="container-fluid">
         <div class="row justify-content-center">
+
+            @if($this->next == '0')
             <div class="col-md-9 bg-light" style="margin-top: 1em; padding: 1em;">
                 <h3>
                     Edit Product/Solution
@@ -39,15 +41,33 @@
                         </textarea>
                     </div>
                     <br>
-                    <input class="form-control" type="file" wire:model="image">
-                    <br>
+                   <!--  <input class="form-control" type="file" wire:model="image">
+                    <br> -->
                     <a class="btn btn-outline-secondary rounded-pill" href="{{route('products')}}">
                         Back
                     </a>
                     <button class="btn btn-outline-secondary rounded-pill" type="submit">
-                        Save
+                        Next
                     </button>
                 </form>
+            
+            @else($this->next == '1')
+            
+                <form method="POST" action="{{route('store_product',$this->p_id)}}"  enctype="multipart/form-data" >
+                    @csrf 
+                    <div class="col-md-12 bg-light" style="margin-top: 1em; padding: 1em;">
+                        <label>
+                             {{"Add ". $this->product_name." Photo"}} 
+                        </label>
+                        <input class="form-control" type="file" name="image"> 
+                        <button class="btn btn-outline-secondary rounded-pill" type="submit">
+                            Save
+                        </button>
+                    
+                </form>
+            
+            @endif
+            </div>
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

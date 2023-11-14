@@ -20,12 +20,12 @@
                       <div class="row g-0">
                         <div class="col-md-6 ">
                           <!-- <img src="/images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="..."> storage/app/products -->
-                          <img src="{{ url(isset($product->image) ? 'uploads/products/'.$product->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 50em;height: 13em; min-width: 23em;">  
+                          <img src="{{ url(isset($product->image) ? $product->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 50em;height: 13em; min-width: 23em;">  
                         </div>
                         <div class="col-md-6">
                           <div class="card-body">   
                             <p class="card-text">
-                                <h4>Product/Solution Description</h4>
+                                <h4>Description:-</h4>
                                 {!! $product->description !!}
                             </p>
                           </div>

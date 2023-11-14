@@ -143,11 +143,11 @@ class HomeController extends Controller
         return view('dashboard.add_product');
     }
 
-    public function store_product(Request $request){
+    public function store_product(Request $request,$id){
         $request->validate([
             'image'=>'required'
         ]);
-        dd($request->all());
+        // dd($request->all());
 
         $file = \Request::file('image');
         if ($file) {
@@ -166,7 +166,7 @@ class HomeController extends Controller
 
 
 
-        return redirect()->route('products');
+        return redirect()->route('show-product',$product->id);
     }
 
     public function edited_product(Request $request, $id){

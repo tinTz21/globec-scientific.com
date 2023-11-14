@@ -47,16 +47,18 @@ class EditProduct extends Component
             'product_name' => 'required',
             'product_description' => 'required',
             'category_id' => 'required',
-             'image' => 'image|max:5024'
+             // 'image' => 'image|max:5024'
         ]);
 
-        $imageUrl = Carbon::now()->timestamp. '.' .$this->image->extension();
-        $storeImage = $this->image->storeAs('products', $imageUrl);
+        // $imageUrl = Carbon::now()->timestamp. '.' .$this->image->extension();
+        // $storeImage = $this->image->storeAs('products', $imageUrl);
     
         $product = Product::updateOrCreate(
             ['id'=>$this->product_id],
-            ['name'=>$this->product_name,'description'=>$this->product_description,'translator_id'=>Auth::user()->id, 'updator_id'=>Auth::user()->id, 'product_categories_id'=>$this->category_id, 'product_sub_categories_id'=>$check_sub_category, 'image'=>$imageUrl]
+            ['name'=>$this->product_name,'description'=>$this->product_description,'translator_id'=>Auth::user()->id, 'updator_id'=>Auth::user()->id, 'product_categories_id'=>$this->category_id, 'product_sub_categories_id'=>$check_sub_category]
         );
-        return redirect()->route('show-product',$product->id);
+        // , 'image'=>$imageUrl
+        $this->next= 1;
+        $this->p_id = $product->id;
     }
 }

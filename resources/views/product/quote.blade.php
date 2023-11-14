@@ -12,7 +12,11 @@
                         </h3>
                         <div class="col-md-12">
 
-                            <img src="{{ url(isset($product->image) ? 'uploads/products/'.$product->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 32em; margin-top: 1.3em;"> 
+                            <img src="{{ url(isset($product->image) ? $product->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 32em; margin-top: 1.3em;"> 
+
+                            {{--
+                            <img src="{{ url(isset($product->image) ? 'uploads/products/'.$product->image : 'images/nopic.jpg') }}" alt="image" style="border-radius: 2px;max-width: 32em; margin-top: 1.3em;">
+                             --}}
                           <!-- <img src="/images/bed.jpeg" width="100%" class="img-fluid rounded-start" alt="..."> -->
                         </div>
                         <div class="col-md-12">

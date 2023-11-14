@@ -62,7 +62,7 @@ Route::get('/dashboard/products', [HomeController::class, 'products'])->name('pr
 
 Route::get('/dashboard/products/add', [HomeController::class, 'add_product'])->name('add-product')->middleware('auth'); 
 
-Route::post('/dashboard/products/store', [HomeController::class, 'store_product'])->name('store_product')->middleware('auth');
+Route::post('/dashboard/store/products/{id}', [HomeController::class, 'store_product'])->name('store_product')->middleware('auth');
 
 Route::get('/dashboard/products/edit/{id}', [HomeController::class, 'edited_product'])->name('edit-product')->middleware('auth'); 
 
